@@ -1,28 +1,65 @@
 import React, { Component } from 'react';
+import { Link, Route, withRouter } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Projects from './components/Projects'
+import About from './components/About'
+import Contact from './components/Contact'
+import Welcome from './components/Welcome'
 
 class App extends Component {
+  constructor(){
+    super();
+    this.projects = React.createRef();
+    this.contact = React.createRef();
+    this.about = React.createRef();
+    this.welcome = React.createRef();
+
+    this.goProjects = this.goProjects.bind(this);
+    this.goContact = this.goContact.bind(this);
+    this.goAbout = this.goAbout.bind(this);
+    this.goWelcome = this.goWelcome.bind(this);
+  }
+
+  goProjects() {
+    this.projects.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  goContact() {
+    this.contact.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  goAbout() {
+    this.about.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  goWelcome() {
+    this.welcome.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest" })
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header
+          goProjects={this.goProjects}
+          goAbout={this.goAbout}
+          goContact={this.goContact}
+          goWelcome={this.goWelcome}/>
+        <Welcome
+          welcome={this.welcome}
+          goProjects={this.goProjects}/>
+        <Projects
+          projects={this.projects}/>
+        <About
+          about={this.about}/>
+        <Contact
+          contact={this.contact}/>
+        <Footer />
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
