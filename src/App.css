@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   color: #eee;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: Helvetica;
 }
 
 a {
@@ -43,12 +43,6 @@ a {
   color: #057ED3;
 }
 
-/* .nav-hide {
-  min-height: 65px;
-  height: 9vh;
-  width: 100vw;
-} */
-
 .content {
   height: 91vh;
 }
@@ -63,7 +57,7 @@ a {
 .welcome-cover {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .welcome-cover:hover {
@@ -73,7 +67,8 @@ a {
 #welcome-content {
   background-size: cover;
   color: white;
-  text-shadow: #057ED3 2px 1px 1px;
+  /* color: #057ED3; */
+  text-shadow: black 2px 1px 1px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -228,7 +223,7 @@ input {
   border: none;
   margin: 5px;
   font-size: 16px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: helvetica;
 }
 
 input:focus {
