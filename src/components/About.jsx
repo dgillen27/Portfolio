@@ -3,7 +3,7 @@ import React from 'react';
 const About = (props) => {
   return(
     <div className="about-container" ref={props.about}>
-    <h1>About me</h1>
+      <h1>About me</h1>
       <div className="content" id="about-content">
         <div><img className="profile-img" src="https://s3.amazonaws.com/image-urls/images/LinkedIn.jpg" alt="" /></div>
         <div className="about">
