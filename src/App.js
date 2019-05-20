@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { Link, Route, withRouter } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Projects from './components/Projects'
-import About from './components/About'
-import Contact from './components/Contact'
-import Welcome from './components/Welcome'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Projects from './components/Projects';
+import About from './components/About';
+import Contact from './components/Contact';
+import Welcome from './components/Welcome';
+import OpenMenu from './components/OpenMenu'
 
 class App extends Component {
   constructor(){
@@ -21,6 +22,11 @@ class App extends Component {
     this.goContact = this.goContact.bind(this);
     this.goAbout = this.goAbout.bind(this);
     this.goWelcome = this.goWelcome.bind(this);
+    this.changeClass = this.changeClass.bind(this);
+
+    this.state = {
+      showClass: false,
+    }
   }
 
   goProjects() {
@@ -39,6 +45,13 @@ class App extends Component {
     this.welcome.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest" })
   }
 
+  changeClass() {
+    const { showClass } = this.state;
+    this.setState({
+      showClass: showClass === true? false: true
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -46,14 +59,21 @@ class App extends Component {
           goProjects={this.goProjects}
           goAbout={this.goAbout}
           goContact={this.goContact}
-          goWelcome={this.goWelcome}/>
+          goWelcome={this.goWelcome}
+          changeClass={this.changeClass}/>
         <Welcome
           welcome={this.welcome}
           goProjects={this.goProjects}/>
-        <Projects
-          projects={this.projects}/>
+        { this.state.showClass && <OpenMenu
+          goProjects={this.goProjects}
+          goAbout={this.goAbout}
+          goContact={this.goContact}
+          goWelcome={this.goWelcome}
+          changeClass={this.changeClass}/>}
         <About
           about={this.about}/>
+        <Projects
+          projects={this.projects}/>
         <Contact
           contact={this.contact}/>
         <Footer />

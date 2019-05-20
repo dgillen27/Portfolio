@@ -6,9 +6,9 @@ const Welcome = (props) => {
       <div className="welcome-cover">
         <div className="content" id="welcome-content">
           {/*<img className="profile-img" src="https://i.imgur.com/LJxwaOw.jpg?2" alt="" />*/}
-          <div>Hello, I'm Daniel Gillen!</div>
-          <div>A full stack web developer</div>
-          <div onClick={props.goProjects} className="welcome-button">View My Work</div>
+          <div>Hey, I'm Dan Gillen!</div>
+          <div>A full stack developer</div>
+          <div onClick={props.goProjects} className="welcome-button">Checkout my work</div>
         </div>
       </div>
     </div>

@@ -4,10 +4,11 @@ import ProjectGrid from './ProjectGrid'
 const Projects = (props) => {
   return(
     <div className="projects-container" ref={props.projects}>
+      <h1 id="project-label">Projects</h1>
       <div className="content" id="project-content">
         <div className="project" id="project-4">
-        <a target="_blank" href="http://anxietymanager.surge.sh"><img className="project-img" src="https://i.imgur.com/cibV9JR.png" alt="" /></a>
-          {/*<div className="project-img"></div>*/}
+        <div className="project-image" id="p4-image"></div>
+        {/*<a target="_blank" href="http://anxietymanager.surge.sh"><img className="project-img" src="https://i.imgur.com/cibV9JR.png" alt="" /></a>*/}
           <div className="project-description">
             <a target="_blank" href="http://anxietymanager.surge.sh">
               <div className="project-name">Anxiety Manager</div>
@@ -30,8 +31,8 @@ const Projects = (props) => {
         </div>
 
         <div className="project">
-          <a target="_blank" href="https://foregoing-celery.surge.sh/"><img className="project-img" src="https://i.imgur.com/TEDCNZw.png" alt="" /></a>
-          {/*<div className="project-img"></div>*/}
+          {/*<a target="_blank" href="https://foregoing-celery.surge.sh/"><img className="project-img" src="https://i.imgur.com/TEDCNZw.png" alt="" /></a>*/}
+          <div className="project-image" id="p3-image"></div>
           <div className="project-description">
             <a target="_blank" href="https://foregoing-celery.surge.sh/">
               <div className="project-name">Beat HostR</div>
@@ -55,8 +56,8 @@ const Projects = (props) => {
         </div>
 
         <div className="project">
-          <a target="_blank" href="http://breweryfinder.surge.sh/"><img className="project-img" src="https://i.imgur.com/GxJ5KBw.png" alt="" /></a>
-          {/*<div className="project-img"></div>*/}
+          {/*<a target="_blank" href="http://breweryfinder.surge.sh/"><img className="project-img" src="https://i.imgur.com/GxJ5KBw.png" alt="" /></a>*/}
+          <div className="project-image" id="p2-image"></div>
           <div className="project-description">
             <a target="_blank" href="http://breweryfinder.surge.sh/">
               <div className="project-name">Brewery Finder</div>
@@ -77,8 +78,8 @@ const Projects = (props) => {
         </div>
 
         <div className="project">
-          <a target="_blank" href="http://matchyshapes.surge.sh/"><img className="project-img" src="https://i.imgur.com/6IcnWlD.png" alt="" /></a>
-          {/*<div className="project-img"></div>*/}
+          {/*<a target="_blank" href="http://matchyshapes.surge.sh/"><img className="project-img" src="https://i.imgur.com/6IcnWlD.png" alt="" /></a>*/}
+          <div className="project-image" id="p1-image"></div>
           <div className="project-description">
             <a target="_blank" href="http://matchyshapes.surge.sh/">
               <div className="project-name">Matchy Shapes</div>
