@@ -4,6 +4,7 @@ import ProjectGrid from './ProjectGrid'
 const Projects = (props) => {
   return(
     <div className="projects-container" ref={props.projects}>
+      <h1 id="project-label">Projects</h1>
       <div className="content" id="project-content">
         <div className="project" id="project-4">
         <div className="project-image" id="p4-image"></div>

@@ -404,6 +404,12 @@ textarea:focus {
   }
 }
 
+#project-label {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-decoration: underline; 
+}
+
 @media only screen and (max-width: 800px) {
   .burger-container {
     display: flex;
