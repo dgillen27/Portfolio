@@ -362,6 +362,10 @@ textarea:focus {
   margin-right: 10vw;
 }
 
+.burger-container:hover {
+  cursor: pointer;
+}
+
 .open-menu {
   display: none;
   flex-direction: column;
@@ -407,7 +411,7 @@ textarea:focus {
 #project-label {
   grid-column-start: 1;
   grid-column-end: 3;
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 800px) {
