@@ -50,10 +50,10 @@ class App extends Component {
         <Welcome
           welcome={this.welcome}
           goProjects={this.goProjects}/>
-        <Projects
-          projects={this.projects}/>
         <About
           about={this.about}/>
+        <Projects
+          projects={this.projects}/>
         <Contact
           contact={this.contact}/>
         <Footer />
