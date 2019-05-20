@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import RenderPropsMenu from './RenderPropsMenu'
+import HamburgerMenu from './HamburgerMenu'
 
 const Header = (props) => {
   return (
@@ -12,7 +12,7 @@ const Header = (props) => {
         <Link onClick={props.goAbout} className="header-button">About</Link>
         <Link onClick={props.goContact} className="header-button">Contact</Link>
       </div>
-      {/*<RenderPropsMenu {...props}/>*/}
+      <HamburgerMenu {...props}/>
     </div>
   )
 }
