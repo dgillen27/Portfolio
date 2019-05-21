@@ -380,6 +380,7 @@ textarea:focus {
 
 .burger-container:hover {
   cursor: pointer;
+  background: #222;
 }
 
 .open-menu {
