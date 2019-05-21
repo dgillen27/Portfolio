@@ -30,6 +30,27 @@ const Projects = (props) => {
           </div>
         </div>
 
+        <div className="project" id="project-5">
+        <div className="project-image" id="ux-image"></div>
+        {/*<a target="_blank" href="http://anxietymanager.surge.sh"><img className="project-img" src="https://i.imgur.com/cibV9JR.png" alt="" /></a>*/}
+          <div className="project-description">
+            <a target="_blank" href="http://anxietymanager.surge.sh">
+              <div className="project-name">Sushi Zo</div>
+            </a>
+            <h2>Front End App</h2>
+            <h3>For this project, I had the pleasure of working with some very talented to UX designers to build a redesign of an already existing website</h3>
+            <a className="small-link" target="_blank" href="http://sushizo-redesign.surge.sh">Checkout the app</a>
+            <br/>
+            <a className="small-link" target="_blank" href="https://github.com/dgillen27/sushi_zo_redesign_ux">Github</a>
+            <br/>
+            <br/>
+            <div>Technologies used</div>
+            <img className="icon" src="https://s3.amazonaws.com/image-urls/images/react_icon.png" alt="" />
+            <img className="icon" src="https://s3.amazonaws.com/image-urls/images/htmlicon.png" alt="" />
+            <img className="icon" src="https://s3.amazonaws.com/image-urls/images/css.png" alt="" />
+          </div>
+        </div>
+
         <div className="project">
           {/*<a target="_blank" href="https://foregoing-celery.surge.sh/"><img className="project-img" src="https://i.imgur.com/TEDCNZw.png" alt="" /></a>*/}
           <div className="project-image" id="p3-image"></div>
@@ -74,6 +95,7 @@ const Projects = (props) => {
             <img className="icon" src="https://s3.amazonaws.com/image-urls/images/react_icon.png" alt="" />
             <img className="icon" src="https://s3.amazonaws.com/image-urls/images/htmlicon.png" alt="" />
             <img className="icon" src="https://s3.amazonaws.com/image-urls/images/css.png" alt="" />
+            <img className="icon" src="https://s3.amazonaws.com/image-urls/images/npmicon.svg" alt="" />
           </div>
         </div>
 

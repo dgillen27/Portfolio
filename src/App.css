@@ -51,6 +51,7 @@ a {
 .welcome-container {
   height: 100vh;
   background-image: url("https://images.pexels.com/photos/34153/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  /* background-image: url("https://images.pexels.com/photos/220357/pexels-photo-220357.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
   background-size: cover;
   background-position: 0% 40%;
 }
@@ -165,6 +166,11 @@ a {
 
 #p4-image {
   background-image: url("https://i.imgur.com/cibV9JR.png");
+}
+
+#ux-image {
+  background-image: url("https://i.imgur.com/JFXP2QN.png");
+  background-position: left;
 }
 
 #p3-image {
@@ -375,8 +381,8 @@ textarea:focus {
   top: 0;
   height: 100vh;
   width: 100vw;
-  animation: menu-opening linear .5s;
-  background: black;
+  animation: menu-opening linear 500ms;
+  background: rgba(0, 0, 0, .92);
   color: white;
 }
 
@@ -414,7 +420,7 @@ textarea:focus {
   text-decoration: underline;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 823px) {
   .burger-container {
     display: flex;
   }
