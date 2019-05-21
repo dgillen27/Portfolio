@@ -148,6 +148,7 @@ a {
   /* grid-template-columns: 1fr 1fr; */
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   margin-top: 50px;
+  /* box-shadow: 0px 3px 15px rgba(0,0,0,0.2); */
 }
 
 #project-4 {
@@ -221,6 +222,15 @@ a {
 
 .about-container h1 {
   text-decoration: underline;
+}
+
+.about a {
+  color: #057ED3;
+  text-decoration: underline;
+}
+
+.about a:hover {
+  color: #7C00FF;
 }
 
 #about-content {

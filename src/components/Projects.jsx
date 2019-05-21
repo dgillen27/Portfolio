@@ -38,7 +38,7 @@ const Projects = (props) => {
               <div className="project-name">Sushi Zo</div>
             </a>
             <h2>Front End App</h2>
-            <h3>For this project, I had the pleasure of working with some very talented to UX designers to build a redesign of an already existing website</h3>
+            <h3>For this project, I had the pleasure of working with some very talented to UX designers to build a redesign of an already existing website.</h3>
             <a className="small-link" target="_blank" href="http://sushizo-redesign.surge.sh">Checkout the app</a>
             <br/>
             <a className="small-link" target="_blank" href="https://github.com/dgillen27/sushi_zo_redesign_ux">Github</a>

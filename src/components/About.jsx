@@ -11,7 +11,9 @@ const About = (props) => {
           in music performance and music education. I have an affinity for problem
           solving, communication and detail oriented work. My passion for technology
           and people drives me to create the best possible experience
-          for users and colleagues alike.  </p>
+          for users and colleagues alike.
+          Interested in learning more? <a target="_blank" href="https://drive.google.com/file/d/1l6nI9ruD8orVsiv7xpmfOsk2_O8AgCoy/view?usp=sharing">Checkout My Resume!</a></p>
+
         </div>
       </div>
     </div>
