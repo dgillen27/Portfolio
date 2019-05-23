@@ -14,8 +14,8 @@ const Projects = (props) => {
               <div className="project-name">Anxiety Manager</div>
             </a>
             <h2>Full Stack App</h2>
-            <h3>Anxiety Manager is a full stack app built on a Rails backend with React frontend,
-            designed to help users toward introspecting about their day to day anxieties</h3>
+            <h3>Anxiety Manager is a full stack app built on a Ruby On Rails backend with a React frontend,
+            designed to help users toward introspecting about their day to day anxieties through data visualization.</h3>
             <a className="small-link" target="_blank" href="http://anxietymanager.surge.sh">Checkout the app</a>
             <br/>
             <a className="small-link" target="_blank" href="https://github.com/dgillen27/anxiety_manager">Github</a>
@@ -57,8 +57,8 @@ const Projects = (props) => {
               <div className="project-name">Beat HostR</div>
             </a>
             <h2>Full Stack App</h2>
-            <h3>Beat HostR is a platform for uploading your music and sharing it with others.
-            Upload your music here and share links to your music with your friends.</h3>
+            <h3>Beat HostR is built on an Express backend and a React front end, it is a platform for uploading your music and sharing it with others.
+            Upload your music here and search through the music of other musicians on the site.</h3>
             <a className="small-link" target="_blank" href="https://foregoing-celery.surge.sh/">Checkout the app</a>
             <br/>
             <a className="small-link" target="_blank" href="https://github.com/BrunoCappelleti/beat-hostR">Github</a>
@@ -80,7 +80,7 @@ const Projects = (props) => {
             <div className="project-name">Brewery Finder</div>
             </a>
             <h2>Front End App</h2>
-            <h3>Brewery Finder is designed for those who love going to breweries!
+            <h3>Brewery Finder is a React app that consumes the OpenBreweryDB API, it's designed for those who love beer!
             Search for breweries near you and find your next spot to grab some beer!</h3>
             <a className="small-link" target="_blank" href="http://breweryfinder.surge.sh/">Checkout the app</a>
             <br/>
@@ -103,7 +103,7 @@ const Projects = (props) => {
               <div className="project-name">Matchy Shapes</div>
             </a>
             <h2>Front End App</h2>
-            <h3>Matchy shapes is an interactive point and click game. Try to change all of the shapes to the same type within the time limit</h3>
+            <h3>Matchy shapes is an interactive javascript point and click game. Try to change all of the shapes to the same type within the time limit!</h3>
             <a className="small-link" target="_blank" href="http://matchyshapes.surge.sh/">Checkout the app</a>
             <br/>
             <a className="small-link" target="_blank" href="https://github.com/dgillen27/Project1_WDI">Github</a>
