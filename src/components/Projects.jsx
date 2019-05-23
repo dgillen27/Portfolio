@@ -5,11 +5,11 @@ const Projects = (props) => {
   return(
     <div className="projects-container" ref={props.projects}>
       <h1 id="project-label">Projects</h1>
+
       <div className="content" id="project-content">
         <div className="project" id="project-4">
-        <div className="project-image" id="p4-image"></div>
-        {/*<a target="_blank" href="http://anxietymanager.surge.sh"><img className="project-img" src="https://i.imgur.com/cibV9JR.png" alt="" /></a>*/}
-          <div className="project-description">
+          <a target="_blank" href="http://anxietymanager.surge.sh"><div className="project-image" id="p4-image"></div></a>
+          <div className="project-description" id="right-description">
             <a target="_blank" href="http://anxietymanager.surge.sh">
               <div className="project-name">Anxiety Manager</div>
             </a>
@@ -31,9 +31,7 @@ const Projects = (props) => {
         </div>
 
         <div className="project" id="project-5">
-        <div className="project-image" id="ux-image"></div>
-        {/*<a target="_blank" href="http://anxietymanager.surge.sh"><img className="project-img" src="https://i.imgur.com/cibV9JR.png" alt="" /></a>*/}
-          <div className="project-description">
+          <div className="project-description" id="left-description">
             <a target="_blank" href="http://anxietymanager.surge.sh">
               <div className="project-name">Sushi Zo</div>
             </a>
@@ -49,12 +47,12 @@ const Projects = (props) => {
             <img className="icon" src="https://s3.amazonaws.com/image-urls/images/htmlicon.png" alt="" />
             <img className="icon" src="https://s3.amazonaws.com/image-urls/images/css.png" alt="" />
           </div>
+          <a target="_blank" href="http://sushizo-redesign.surge.sh"><div className="project-image" id="ux-image"></div></a>
         </div>
 
         <div className="project">
-          {/*<a target="_blank" href="https://foregoing-celery.surge.sh/"><img className="project-img" src="https://i.imgur.com/TEDCNZw.png" alt="" /></a>*/}
-          <div className="project-image" id="p3-image"></div>
-          <div className="project-description">
+          <a target="_blank" href="https://foregoing-celery.surge.sh/"><div className="project-image" id="p3-image"></div></a>
+          <div className="project-description" id="right-description">
             <a target="_blank" href="https://foregoing-celery.surge.sh/">
               <div className="project-name">Beat HostR</div>
             </a>
@@ -77,11 +75,9 @@ const Projects = (props) => {
         </div>
 
         <div className="project">
-          {/*<a target="_blank" href="http://breweryfinder.surge.sh/"><img className="project-img" src="https://i.imgur.com/GxJ5KBw.png" alt="" /></a>*/}
-          <div className="project-image" id="p2-image"></div>
-          <div className="project-description">
+          <div className="project-description" id="left-description">
             <a target="_blank" href="http://breweryfinder.surge.sh/">
-              <div className="project-name">Brewery Finder</div>
+            <div className="project-name">Brewery Finder</div>
             </a>
             <h2>Front End App</h2>
             <h3>Brewery Finder is designed for those who love going to breweries!
@@ -97,12 +93,12 @@ const Projects = (props) => {
             <img className="icon" src="https://s3.amazonaws.com/image-urls/images/css.png" alt="" />
             <img className="icon" src="https://s3.amazonaws.com/image-urls/images/npmicon.svg" alt="" />
           </div>
+          <a target="_blank" href="http://breweryfinder.surge.sh/"><div className="project-image" id="p2-image"></div></a>
         </div>
 
         <div className="project">
-          {/*<a target="_blank" href="http://matchyshapes.surge.sh/"><img className="project-img" src="https://i.imgur.com/6IcnWlD.png" alt="" /></a>*/}
-          <div className="project-image" id="p1-image"></div>
-          <div className="project-description">
+          <a target="_blank" href="http://matchyshapes.surge.sh/"><div className="project-image" id="p1-image"></div></a>
+          <div className="project-description" id="right-description">
             <a target="_blank" href="http://matchyshapes.surge.sh/">
               <div className="project-name">Matchy Shapes</div>
             </a>

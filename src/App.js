@@ -70,10 +70,10 @@ class App extends Component {
           goContact={this.goContact}
           goWelcome={this.goWelcome}
           changeClass={this.changeClass}/>}
-        <About
-          about={this.about}/>
         <Projects
           projects={this.projects}/>
+        <About
+          about={this.about}/>
         <Contact
           contact={this.contact}/>
         <Footer />
