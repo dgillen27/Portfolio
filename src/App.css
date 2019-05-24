@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  color: black;
+  color: #222;
   font-family: "Ubuntu", sans-serif;
   background: #fefefe;
 }
@@ -12,15 +12,15 @@ a {
 
 .header {
   position: fixed;
-  height: 65px;
+  height: 68px;
   width: 100vw;
-  background: black;
+  background: #ddd;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border-bottom: 3px solid #2394F3;
-  border-bottom: 3px solid #2394F3;
+  /* border-bottom: 3px solid #2394F3; */
   z-index: 2;
+  color: black;
 }
 
 .my-name {
@@ -39,6 +39,7 @@ a {
 .header-button {
   font-size: 18px;
   transition: background-color, padding, font-size, 400ms;
+  color: #222;
 }
 
 .header-button:hover {
@@ -55,9 +56,11 @@ a {
   /* background-image: url("https://images.pexels.com/photos/220357/pexels-photo-220357.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
   /* background-image: url("https://images.pexels.com/photos/633409/pexels-photo-633409.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
   /* background-image: url("https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
-  background-image: url("https://images.pexels.com/photos/1239162/pexels-photo-1239162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  /* background-image: url("https://images.pexels.com/photos/1239162/pexels-photo-1239162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
+  background-image: url("https://images.pexels.com/photos/1449082/pexels-photo-1449082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  /* background-image: url("https://images.pexels.com/photos/459654/pexels-photo-459654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
   background-size: cover;
-  background-position: 0% 40%;
+  background-position: right;
 }
 
 .welcome-cover {
@@ -72,9 +75,9 @@ a {
 
 #welcome-content {
   background-size: cover;
-  color: white;
+  color: #ddd;
   /* color: #2394F3; */
-  text-shadow: black 2px 1px 1px;
+  text-shadow: black 1px 1px 1px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,8 +88,8 @@ a {
 .welcome-button {
   font-size: 21px;
   color: black;
-  border: 3px solid white;
-  background: white;
+  border: 3px solid #ddd;
+  background: #ddd;
   width: 200px;
   margin-top: 20px;
   padding: 10px;
@@ -352,7 +355,7 @@ textarea:focus {
 
 .footer-container {
   min-height: 80px;
-  background: #111;
+  background: #ddd;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -360,6 +363,7 @@ textarea:focus {
 
 .footer-content a {
   transition: color 400ms;
+  color: #222;
 }
 
 .footer-content a:hover {
@@ -376,7 +380,7 @@ textarea:focus {
 .burger {
   display: block;
   height: 2px;
-  background: white;
+  background: #222;
   width: 40px;
   margin: 3px;
   /* border-radius: 2px; */
@@ -395,7 +399,7 @@ textarea:focus {
 
 .burger-container:hover {
   cursor: pointer;
-  background: #222;
+  background: #ccc;
 }
 
 .open-menu {
