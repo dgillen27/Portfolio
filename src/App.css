@@ -412,7 +412,7 @@ textarea:focus {
   height: 100vh;
   width: 100vw;
   animation: menu-opening linear 500ms;
-  background: rgba(0, 0, 0, .92);
+  background: rgba(34, 34, 34, .96);
   color: white;
 }
 
