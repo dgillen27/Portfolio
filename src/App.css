@@ -341,11 +341,12 @@ textarea:focus {
   border-radius: 5px;
   transition: 300ms;
   font-size: 16px;
+  background: #2394F3;
 }
 
 .submit-button:hover {
   cursor: pointer;
-  background: #2394F3;
+  background: #F38322;
 }
 
 .footer-container {
