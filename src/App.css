@@ -342,6 +342,7 @@ textarea:focus {
   transition: 300ms;
   font-size: 16px;
   background: #2394F3;
+  color: white;
 }
 
 .submit-button:hover {
