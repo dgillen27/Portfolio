@@ -187,6 +187,8 @@ a {
 
 #p4-image {
   background-image: url("https://i.imgur.com/cibV9JR.png");
+  /* background-image: url("https://s3.amazonaws.com/image-urls/images/anx_manager_screen.png"); */
+  /* background-position: left; */
 }
 
 #ux-image {
