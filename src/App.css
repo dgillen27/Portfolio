@@ -1,6 +1,7 @@
 :root {
   --my-red: #DC153B;
   --anx-blue: #2394F3;
+  --anx-orange: #F38322;
 }
 
 .App {
@@ -131,7 +132,8 @@ a {
 }
 
 .small-link:hover {
-  color: #F38322;
+  /* color: var(--anx-orange); */
+  color: var(--my-red);
 }
 
 .project-name {
@@ -144,7 +146,8 @@ a {
 }
 
 .project-name:hover {
-  color: #F38322;
+  /* color: var(--anx-orange); */
+  color: var(--my-red);
 }
 
 #project-content {
@@ -249,7 +252,8 @@ a {
 }
 
 .about a:hover {
-  color: #F38322;
+  /* color: var(--anx-orange); */
+  color: var(--my-red);
 }
 
 #about-content {
@@ -262,17 +266,39 @@ a {
 }
 
 .about {
-  text-align: center;
-  width: 50%;
+  text-align: left;
+  width: 100%;
+  max-width: 575px;
   justify-self: center;
-  font-size: 22px;
+  font-size: 1.2em;
   grid-column-start: 1;
   grid-column-end: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about p {
   margin-top: 0;
   font-family: 'Lato', sans-serif;
+}
+
+.about-icon {
+  height: 60px;
+  width: 60px;
+  position: relative;
+  /* transition: transform 1s linear; */
+}
+
+.about-icon:hover {
+  top: -2px;
+}
+
+.about-icon-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 70%;
 }
 
 p {
@@ -323,6 +349,7 @@ input {
   font-size: 16px;
   font-family: 'Lato', sans-serif;
   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  padding-left: 10px;
 }
 
 input:focus {
@@ -339,6 +366,7 @@ textarea {
   font-size: 16px;
   font-family: 'Lato', sans-serif;
   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  padding: 10px 0 0 10px;
 }
 
 textarea:focus {
@@ -358,7 +386,8 @@ textarea:focus {
 
 .submit-button:hover {
   cursor: pointer;
-  background: #F38322;
+  /* background: var(--anx-orange); */
+  background: var(--my-red);
 }
 
 .footer-container {
@@ -375,7 +404,8 @@ textarea:focus {
 }
 
 .footer-content a:hover {
-  color:#057FD2;
+  /* color:#057FD2; */
+  color: var(--my-red);
 }
 
 .footer-content {
@@ -504,7 +534,7 @@ textarea:focus {
     z-index: 1;
     margin-top: 15px;
     width: 90%;
-    text-align: center;
+    /* text-align: center; */
   }
 
   .my-name {
@@ -528,7 +558,8 @@ textarea:focus {
 
 @media only screen and (max-width: 823px) {
   .project-description {
-    text-align: center;
+    margin-top: 15px;
+    text-align: left;
   }
 }
 
@@ -551,7 +582,6 @@ textarea:focus {
     width: 99vw;
     /* justify-self: start; */
     margin-left: 1vw;
-    text-align: center;
   }
 
   .project-image {
@@ -571,15 +601,3 @@ textarea:focus {
       justify-self: start;
     }
 }
-
-/* @media only screen and (max-width: 350px) {
-  .project-image {
-    .margin-left: 2px;
-  }
-
-  .project-description {
-    max-width: 300px;
-    justify-self: left;
-    margin-left: 2px;
-  }
-} */

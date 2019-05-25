@@ -32,7 +32,7 @@ const Projects = (props) => {
 
         <div className="project" id="project-5">
           <div className="project-description" id="left-description">
-            <a target="_blank" href="http://anxietymanager.surge.sh">
+            <a className="right-a" target="_blank" href="http://anxietymanager.surge.sh">
               <div className="project-name">Sushi Zo</div>
             </a>
             <h2>Front End App</h2>
