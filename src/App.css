@@ -1,3 +1,8 @@
+:root {
+  --my-red: #DC153B;
+  --anx-blue: #2394F3;
+}
+
 .App {
   text-align: center;
   color: #222;
@@ -18,9 +23,9 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* border-bottom: 3px solid #2394F3; */
+  /* border-bottom: 3px solid var(--anx-blue); */
   z-index: 2;
-  color: black;
+  /* color: black; */
 }
 
 .my-name {
@@ -43,7 +48,8 @@ a {
 }
 
 .header-button:hover {
-  color: #2394F3;
+  /* color: var(--anx-blue); */
+  color: var(--my-red);
 }
 
 .content {
@@ -76,7 +82,7 @@ a {
 #welcome-content {
   background-size: cover;
   color: #ddd;
-  /* color: #2394F3; */
+  /* color: var(--anx-blue); */
   text-shadow: black 1px 1px 1px;
   display: flex;
   flex-direction: column;
@@ -95,7 +101,6 @@ a {
   padding: 10px;
   transition: 300ms;
   text-shadow: none;
-  /* box-shadow: #2394F3 1px 0 10px; */
 }
 
 .welcome-button:hover {
@@ -103,9 +108,12 @@ a {
   /* background: #0EF79B; */
   /* border-color: #0EF79B; */
   /* color: #242834; */
-  background: #2394F3;
-  border-color: #2394F3;
+  /* background: var(--anx-blue);
+  border-color: var(--anx-blue); */
+  background: var(--my-red);
+  border-color: var(--my-red);
   color: black;
+  color: white;
 }
 
 .projects-container {
@@ -236,7 +244,7 @@ a {
 }
 
 .about a {
-  color: #2394F3;
+  color: var(--anx-blue);
   text-decoration: underline;
 }
 
@@ -344,7 +352,7 @@ textarea:focus {
   border-radius: 5px;
   transition: 300ms;
   font-size: 16px;
-  background: #2394F3;
+  background: var(--anx-blue);
   color: white;
 }
 
@@ -410,9 +418,9 @@ textarea:focus {
   position: fixed;
   top: 0;
   height: 100vh;
-  width: 100vw;
-  animation: menu-opening linear 500ms;
-  background: rgba(34, 34, 34, .96);
+  width: 75vw;
+  animation: menu-opening ease-out 500ms;
+  background: rgba(34, 34, 34, 1);
   color: white;
 }
 
@@ -423,24 +431,36 @@ textarea:focus {
 
 .open-menu h2 {
   position: relative;
-  left: 50px;
+  left: 65px;
 }
 
 .open-menu h1:hover {
   cursor: pointer;
+  color: #DC153B;
 }
 
 .open-menu h2:hover {
   cursor: pointer;
+  color: #DC153B;
+}
+
+.open-cover {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @keyframes menu-opening {
   0% {
-    right: -100vw;
+    left: -100vw;
   }
 
   100% {
-    right: 0;
+    left: 0;
   }
 }
 
@@ -454,6 +474,14 @@ textarea:focus {
 @media only screen and (max-width: 823px) {
   .burger-container {
     display: flex;
+  }
+
+  .open-cover {
+    display: block;
+  }
+
+  .header {
+    /* justify-content: flex-start; */
   }
 
   .header-content {

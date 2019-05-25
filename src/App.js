@@ -8,7 +8,8 @@ import Projects from './components/Projects';
 import About from './components/About';
 import Contact from './components/Contact';
 import Welcome from './components/Welcome';
-import OpenMenu from './components/OpenMenu'
+import OpenMenu from './components/OpenMenu';
+import Cover from './components/Cover'
 
 class App extends Component {
   constructor(){
@@ -61,6 +62,7 @@ class App extends Component {
           goContact={this.goContact}
           goWelcome={this.goWelcome}
           changeClass={this.changeClass}/>
+        {this.state.showClass && <Cover />}
         <Welcome
           welcome={this.welcome}
           goProjects={this.goProjects}/>
