@@ -92,6 +92,7 @@ const Projects = (props) => {
             <img className="icon" src="https://s3.amazonaws.com/image-urls/images/htmlicon.png" alt="" />
             <img className="icon" src="https://s3.amazonaws.com/image-urls/images/css.png" alt="" />
             <img className="icon" src="https://s3.amazonaws.com/image-urls/images/npmicon.svg" alt="" />
+            <img className="icon" src="https://s3.amazonaws.com/image-urls/images/google-maps.png" alt="" />
           </div>
           <a target="_blank" href="http://breweryfinder.surge.sh/"><div className="project-image" id="p2-image"></div></a>
         </div>
