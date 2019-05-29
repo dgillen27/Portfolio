@@ -504,7 +504,7 @@ textarea:focus {
   font-size: 38px;
 }
 
-@media only screen and (max-width: 823px) {
+@media only screen and (max-width: 880px) {
   .burger-container {
     display: flex;
   }
@@ -549,7 +549,12 @@ textarea:focus {
     z-index: 5;
   }
 
+  .project-description {
+    margin-top: 15px;
+  }
+
   #right-description {
+    grid-row-start: 2;
     justify-self: center;
   }
 
@@ -557,12 +562,9 @@ textarea:focus {
     grid-row-start: 2;
     justify-self: center;
   }
-}
 
-@media only screen and (max-width: 823px) {
-  .project-description {
-    margin-top: 15px;
-    text-align: left;
+  .project {
+    width: 95%;
   }
 }
 
@@ -572,7 +574,7 @@ textarea:focus {
   }
 
   .project {
-    max-width: 300px;
+    /* max-width: 300px; */
   }
 
   .project {
