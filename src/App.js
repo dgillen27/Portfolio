@@ -54,6 +54,7 @@ class App extends Component {
   }
 
   render() {
+    const { showClass } = this.state
     return (
       <div className="App">
         <Header
@@ -62,16 +63,17 @@ class App extends Component {
           goContact={this.goContact}
           goWelcome={this.goWelcome}
           changeClass={this.changeClass}/>
-        {this.state.showClass && <Cover />}
+        { showClass && <Cover />}
         <Welcome
           welcome={this.welcome}
           goProjects={this.goProjects}/>
-        { this.state.showClass && <OpenMenu
+        { showClass && <OpenMenu
           goProjects={this.goProjects}
           goAbout={this.goAbout}
           goContact={this.goContact}
           goWelcome={this.goWelcome}
-          changeClass={this.changeClass}/>}
+          changeClass={this.changeClass}
+          showClass={showClass}/>}
         <Projects
           projects={this.projects}/>
         <About

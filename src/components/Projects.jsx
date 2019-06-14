@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectGrid from './ProjectGrid'
+import TrackVisibility from 'react-on-screen';
 
 const Projects = (props) => {
   return(
@@ -7,7 +7,7 @@ const Projects = (props) => {
       <h1 id="project-label">Projects</h1>
 
       <div className="content" id="project-content">
-        <div className="project" id="project-4">
+        <div className="project" id="project-left">
           <a target="_blank" href="http://anxietymanager.surge.sh"><div className="project-image" id="p4-image"></div></a>
           <div className="project-description" id="right-description">
             <a target="_blank" href="http://anxietymanager.surge.sh">
@@ -30,7 +30,7 @@ const Projects = (props) => {
           </div>
         </div>
 
-        <div className="project" id="project-5">
+        <div className="project" id="project-right">
           <div className="project-description" id="left-description">
             <a className="right-a" target="_blank" href="http://sushizo-redesign.surge.sh">
               <div className="project-name">Sushi Zo</div>
@@ -50,7 +50,7 @@ const Projects = (props) => {
           <a target="_blank" href="http://sushizo-redesign.surge.sh"><div className="project-image" id="ux-image"></div></a>
         </div>
 
-        <div className="project">
+        <div className="project" id="project-left">
           <a target="_blank" href="https://foregoing-celery.surge.sh/"><div className="project-image" id="p3-image"></div></a>
           <div className="project-description" id="right-description">
             <a target="_blank" href="https://foregoing-celery.surge.sh/">
@@ -74,7 +74,7 @@ const Projects = (props) => {
           </div>
         </div>
 
-        <div className="project">
+        <div className="project" id="project-right">
           <div className="project-description" id="left-description">
             <a target="_blank" href="http://breweryfinder.surge.sh/">
             <div className="project-name">Brewery Finder</div>
@@ -97,7 +97,7 @@ const Projects = (props) => {
           <a target="_blank" href="http://breweryfinder.surge.sh/"><div className="project-image" id="p2-image"></div></a>
         </div>
 
-        <div className="project">
+        <div className="project" id="project-left">
           <a target="_blank" href="http://matchyshapes.surge.sh/"><div className="project-image" id="p1-image"></div></a>
           <div className="project-description" id="right-description">
             <a target="_blank" href="http://matchyshapes.surge.sh/">
