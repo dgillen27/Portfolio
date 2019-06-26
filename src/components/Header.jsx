@@ -4,7 +4,7 @@ import HamburgerMenu from './HamburgerMenu'
 
 const Header = (props) => {
   return (
-    <div className="header">
+    <div className={props.isTop? "header": "topHeader"}>
 
       <div className="header-content">
         <Link onClick={props.goWelcome} className="header-button">Home</Link>

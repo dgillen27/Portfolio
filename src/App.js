@@ -27,6 +27,7 @@ class App extends Component {
 
     this.state = {
       showClass: false,
+      isTop: false,
     }
   }
 
@@ -53,11 +54,23 @@ class App extends Component {
     })
   }
 
+  componentDidMount() {
+    document.addEventListener('scroll', () => {
+      const isTop = window.scrollY;
+      if (isTop !== 0) {
+          this.setState({ isTop: true })
+      } else if (isTop === 0){
+        this.setState({ isTop: false})
+      }
+    });
+  }
+
   render() {
-    const { showClass } = this.state
+    const { showClass, isTop } = this.state
     return (
       <div className="App">
         <Header
+          isTop={isTop}
           goProjects={this.goProjects}
           goAbout={this.goAbout}
           goContact={this.goContact}

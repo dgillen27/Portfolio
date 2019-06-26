@@ -27,6 +27,21 @@ a {
   /* border-bottom: 3px solid var(--anx-blue); */
   z-index: 2;
   /* color: black; */
+  transition: background-color 500ms;
+}
+
+.topHeader {
+  transition: background-color 500ms;
+  position: fixed;
+  height: 68px;
+  width: 100vw;
+  background: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* border-bottom: 3px solid var(--anx-blue); */
+  z-index: 2;
+  /* color: black; */
 }
 
 .my-name {
@@ -42,13 +57,24 @@ a {
   align-items: center;
 }
 
-.header-button {
+.header a {
   font-size: 18px;
   transition: background-color, padding, font-size, 400ms;
   color: #222;
 }
 
-.header-button:hover {
+.header a:hover {
+  /* color: var(--anx-blue); */
+  color: var(--my-red);
+}
+
+.topHeader a {
+  font-size: 18px;
+  transition: background-color, padding, font-size, 400ms;
+  color: white;
+}
+
+.topHeader a:hover {
   /* color: var(--anx-blue); */
   color: var(--my-red);
 }
@@ -454,6 +480,14 @@ textarea:focus {
   margin-right: 10vw;
 }
 
+.topHeader .burger {
+  background: white;
+}
+
+.topHeader .burger-container:hover {
+  background: none;
+}
+
 .burger-container:hover {
   cursor: pointer;
   background: #ccc;
@@ -476,11 +510,13 @@ textarea:focus {
 .open-menu h1 {
   position: relative;
   left: 50px;
+  transition: color 300ms;
 }
 
 .open-menu h2 {
   position: relative;
   left: 65px;
+  transition: color 300ms;
 }
 
 .open-menu h1:hover {
