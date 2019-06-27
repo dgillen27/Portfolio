@@ -58,20 +58,20 @@ a {
 }
 
 .header a {
-  font-size: 18px;
+  font-size: 20px;
   transition: background-color, padding, font-size, 400ms;
   color: #222;
 }
 
 .header a:hover {
-  /* color: var(--anx-blue); */
   color: var(--my-red);
 }
 
 .topHeader a {
-  font-size: 18px;
+  font-size: 20px;
   transition: background-color, padding, font-size, 400ms;
   color: white;
+  text-shadow: 1px 1px 1px black;
 }
 
 .topHeader a:hover {
@@ -521,6 +521,7 @@ textarea:focus {
 
 .topHeader .burger {
   background: white;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
 }
 
 .topHeader .burger-container:hover {
