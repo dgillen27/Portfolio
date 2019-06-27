@@ -1,13 +1,19 @@
 import React from 'react';
 import TrackVisibility from 'react-on-screen';
+import ProjectLeft from './ProjectLeft'
 
 const Projects = (props) => {
   return(
     <div className="projects-container" ref={props.projects}>
       <h1 id="project-label">Projects</h1>
 
+
+
       <div className="content" id="project-content">
-        <div className="project" id="project-left">
+        {/*<TrackVisibility>
+          <ProjectLeft />
+        </TrackVisibility>*/}
+        <div className="project" id="project-left" ref={props.ref}>
           <a target="_blank" href="http://anxietymanager.surge.sh"><div className="project-image" id="p4-image"></div></a>
           <div className="project-description" id="right-description">
             <a target="_blank" href="http://anxietymanager.surge.sh">

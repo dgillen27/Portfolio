@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Route, withRouter } from 'react-router-dom';
-import logo from './logo.svg';
+import { withRouter } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -18,12 +17,15 @@ class App extends Component {
     this.contact = React.createRef();
     this.about = React.createRef();
     this.welcome = React.createRef();
+    this.first = React.createRef();
 
     this.goProjects = this.goProjects.bind(this);
     this.goContact = this.goContact.bind(this);
     this.goAbout = this.goAbout.bind(this);
     this.goWelcome = this.goWelcome.bind(this);
     this.changeClass = this.changeClass.bind(this);
+    this.showItem = this.showItem.bind(this);
+    this.changeRef = this.changeRef.bind(this);
 
     this.state = {
       showClass: false,
@@ -54,6 +56,20 @@ class App extends Component {
     })
   }
 
+  showItem() {
+    const project = document.querySelector(".project")
+    const value = project.getBoundingClientRect();
+    if (value.top > window.scrollY) {
+      console.log(value.top);
+      console.log("fuck");
+      project.style.visiblity = "hidden"
+    }
+  }
+
+  changeRef() {
+    this.first.style.backgroundColor = "red"
+  }
+
   componentDidMount() {
     document.addEventListener('scroll', () => {
       const isTop = window.scrollY;
@@ -62,7 +78,9 @@ class App extends Component {
       } else if (isTop === 0){
         this.setState({ isTop: false})
       }
+      this.showItem();
     });
+    console.log("fuck" + window.scrollY);
   }
 
   render() {
@@ -88,6 +106,7 @@ class App extends Component {
           changeClass={this.changeClass}
           showClass={showClass}/>}
         <Projects
+          ref={this.first}
           projects={this.projects}/>
         <About
           about={this.about}/>

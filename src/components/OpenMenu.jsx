@@ -1,7 +1,7 @@
 import React from 'react';
 
 const OpenMenu = (props) => {
-  const { changeClass, goWelcome, goProjects, goAbout, goContact, showClass} = props
+  const { changeClass, goWelcome, goProjects, goAbout, goContact} = props
   return (
     <div className="open-menu">
       <h1 onClick={props.changeClass}>X</h1>

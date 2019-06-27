@@ -118,6 +118,20 @@ a {
   font-size: 55px;
 }
 
+.first {
+  position: relative;
+  animation: slide-in-left 1000ms ease-out;
+}
+
+.second {
+  visibility: hidden;
+  position: relative;
+  /* left: 200vw; */
+  animation: slide-in-right 1000ms ease-out;
+  animation-delay: 1000ms;
+  animation-fill-mode: forwards;
+}
+
 .welcome-button {
   font-size: 21px;
   color: black;
@@ -128,6 +142,11 @@ a {
   padding: 10px;
   transition: 300ms;
   text-shadow: none;
+  position: relative;
+  animation: slide-up 1000ms;
+  animation-delay: 2000ms;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
 .welcome-button:hover {
@@ -141,6 +160,19 @@ a {
   border-color: var(--my-red);
   color: black;
   color: white;
+}
+
+@keyframes slide-up {
+  from {
+    visibility: visible;
+    top: 100vw;
+  }
+
+  to {
+    visibility: visible;
+    animation-fill-mode: forwards;
+    top: 0;
+  }
 }
 
 .projects-container {
@@ -199,16 +231,16 @@ a {
   /* animation: slide-in-left ease-out 1000ms; */
 }
 
-/* #project-left {
-  margin-top: 100px;
+#project-left {
+  /* margin-top: 100px; */
   position: relative;
-  animation: slide-in-left ease-out 1000ms;
+  animation: slide-in-left ease-out 800ms;
 }
 
 #project-right {
   position: relative;
-  animation: slide-in-right east-out 1000ms;
-} */
+  animation: slide-in-right ease-out 800ms;
+}
 
 .project-image {
   background-size: cover;
@@ -552,22 +584,26 @@ textarea:focus {
 @keyframes slide-in-left {
   0% {
     left: -200vw;
+    visibility: visible;
   }
 
   100% {
     left: 0;
+    visibility: visible;
   }
 }
 
-/* @keyframes slide-in-right {
+@keyframes slide-in-right {
   0% {
+    visibility: visible;
     left: 200vw;
   }
 
   100% {
+    visibility: visible;
     left: 0;
   }
-} */
+}
 
 #project-label {
   grid-column-start: 1;
