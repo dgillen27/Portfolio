@@ -12,7 +12,7 @@ const projectsObserver = new IntersectionObserver(
 
 const Projects = (props) => {
   return(
-    <div className="projects-container" ref={props.ref1}>
+    <div className="projects-container" ref={props.projects}>
       <h1 id="project-label">Projects</h1>
 
       <div className="content" id="project-content">

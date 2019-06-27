@@ -126,7 +126,6 @@ a {
 .second {
   visibility: hidden;
   position: relative;
-  /* left: 200vw; */
   animation: slide-in-right 1000ms ease-out;
   animation-delay: 1000ms;
   animation-fill-mode: forwards;
@@ -163,12 +162,18 @@ a {
 }
 
 @keyframes slide-up {
-  from {
-    visibility: visible;
+  0% {
+    visibility: hidden;
     top: 100vw;
   }
+  45% {
+    visibility: hidden;
+  }
+  50%: {
+    visibility: visible;
+  }
 
-  to {
+  100% {
     visibility: visible;
     animation-fill-mode: forwards;
     top: 0;
@@ -357,12 +362,6 @@ a {
 .about-icon {
   height: 60px;
   width: 60px;
-  position: relative;
-  /* transition: transform 1s linear; */
-}
-
-.about-icon:hover {
-  top: -2px;
 }
 
 .about-icon-container {
@@ -370,6 +369,14 @@ a {
   justify-content: space-between;
   margin-top: 50px;
   width: 70%;
+}
+
+.about-icon-container a {
+  transition: transform 200ms linear;
+}
+
+.about-icon-container a:hover {
+  transform: translateY(-4px);
 }
 
 p {

@@ -21,7 +21,7 @@ class App extends Component {
     this.welcome = React.createRef();
     this.ref1 = React.createRef();
 
-    // this.goProjects = this.goProjects.bind(this);
+    this.goProjects = this.goProjects.bind(this);
     this.goContact = this.goContact.bind(this);
     this.goAbout = this.goAbout.bind(this);
     this.goWelcome = this.goWelcome.bind(this);
@@ -36,7 +36,7 @@ class App extends Component {
     }
   }
 
-  goProjects = () => {
+  goProjects() {
     this.projects.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
