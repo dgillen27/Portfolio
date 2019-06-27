@@ -2,24 +2,40 @@ import React from 'react';
 import TrackVisibility from 'react-on-screen';
 import ProjectLeft from './ProjectLeft'
 
-const projectsObserver = new IntersectionObserver(
-  (entries, projectsObserver) => {
-    console.log(entries);
-  }
-)
+function useOnScreen(options) {
+  const ref = React.useRef();
+  const [visible, setVisible] = React.useState(false);
 
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      setVisible(entry.isIntersecting)
+    }, options)
+
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.observe(ref.current)
+      }
+    }
+  }, [ref, options])
+
+  return [ref, visible]
+}
 
 
 const Projects = (props) => {
+  const [ref, visible] = useOnScreen({ rootMargin: "0px" })
   return(
     <div className="projects-container" ref={props.projects}>
       <h1 id="project-label">Projects</h1>
-
       <div className="content" id="project-content">
-        {/*<TrackVisibility>
-          <ProjectLeft />
-        </TrackVisibility>*/}
-        <div className="project" id="project-left" ref={props.ref}>
+
+        <div className="project" id="project-left" ref={ref} style={{
+          opacity: visible? "1": "1",
+        }}>
           <a target="_blank" href="http://anxietymanager.surge.sh"><div className="project-image" id="p4-image"></div></a>
           <div className="project-description" id="right-description">
             <a target="_blank" href="http://anxietymanager.surge.sh">
@@ -42,7 +58,9 @@ const Projects = (props) => {
           </div>
         </div>
 
-        <div className="project" id="project-right">
+        <div className="project" id="project-right" style={{
+          opacity: visible? "1": "1",
+        }}>
           <div className="project-description" id="left-description">
             <a className="right-a" target="_blank" href="http://sushizo-redesign.surge.sh">
               <div className="project-name">Sushi Zo</div>

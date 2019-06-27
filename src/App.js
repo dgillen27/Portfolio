@@ -82,7 +82,6 @@ class App extends Component {
       } else if (isTop === 0){
         this.setState({ isTop: false})
       }
-      this.showItem();
     });
   }
 
