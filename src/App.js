@@ -10,6 +10,8 @@ import Welcome from './components/Welcome';
 import OpenMenu from './components/OpenMenu';
 import Cover from './components/Cover'
 
+
+
 class App extends Component {
   constructor(){
     super();
@@ -17,9 +19,9 @@ class App extends Component {
     this.contact = React.createRef();
     this.about = React.createRef();
     this.welcome = React.createRef();
-    this.first = React.createRef();
+    this.ref1 = React.createRef();
 
-    this.goProjects = this.goProjects.bind(this);
+    // this.goProjects = this.goProjects.bind(this);
     this.goContact = this.goContact.bind(this);
     this.goAbout = this.goAbout.bind(this);
     this.goWelcome = this.goWelcome.bind(this);
@@ -30,10 +32,11 @@ class App extends Component {
     this.state = {
       showClass: false,
       isTop: false,
+      show: false,
     }
   }
 
-  goProjects() {
+  goProjects = () => {
     this.projects.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
@@ -61,13 +64,14 @@ class App extends Component {
     const value = project.getBoundingClientRect();
     if (value.top > window.scrollY) {
       console.log(value.top);
-      console.log("fuck");
-      project.style.visiblity = "hidden"
+      this.setState({
+        show: true
+      })
     }
   }
 
   changeRef() {
-    this.first.style.backgroundColor = "red"
+    // this.first.style.backgroundColor = "red"
   }
 
   componentDidMount() {
@@ -80,7 +84,6 @@ class App extends Component {
       }
       this.showItem();
     });
-    console.log("fuck" + window.scrollY);
   }
 
   render() {
@@ -106,7 +109,7 @@ class App extends Component {
           changeClass={this.changeClass}
           showClass={showClass}/>}
         <Projects
-          ref={this.first}
+          ref1={this.ref1}
           projects={this.projects}/>
         <About
           about={this.about}/>

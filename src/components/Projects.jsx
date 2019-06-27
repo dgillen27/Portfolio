@@ -2,12 +2,18 @@ import React from 'react';
 import TrackVisibility from 'react-on-screen';
 import ProjectLeft from './ProjectLeft'
 
+const projectsObserver = new IntersectionObserver(
+  (entries, projectsObserver) => {
+    console.log(entries);
+  }
+)
+
+
+
 const Projects = (props) => {
   return(
-    <div className="projects-container" ref={props.projects}>
+    <div className="projects-container" ref={props.ref1}>
       <h1 id="project-label">Projects</h1>
-
-
 
       <div className="content" id="project-content">
         {/*<TrackVisibility>
