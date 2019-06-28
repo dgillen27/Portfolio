@@ -27,11 +27,11 @@ function useOnScreen(options) {
 
 
 const Projects = (props) => {
-  const [ref, visible] = useOnScreen({ rootMargin: "60px" })
-  const [ref1, visible1] = useOnScreen({ rootMargin: "60px" })
-  const [ref2, visible2] = useOnScreen({ rootMargin: "60px" })
-  const [ref3, visible3] = useOnScreen({ rootMargin: "60px" })
-  const [ref4, visible4] = useOnScreen({ rootMargin: "60px" })
+  const [ref, visible] = useOnScreen({ rootMargin: "-50px" })
+  const [ref1, visible1] = useOnScreen({ rootMargin: "-50px" })
+  const [ref2, visible2] = useOnScreen({ rootMargin: "-50px" })
+  const [ref3, visible3] = useOnScreen({ rootMargin: "-50px" })
+  const [ref4, visible4] = useOnScreen({ rootMargin: "-5px" })
   return(
     <div className="projects-container" ref={props.projects}>
       <h1 id="project-label">Projects</h1>
@@ -39,6 +39,7 @@ const Projects = (props) => {
 
         <div className="project" id="project-left" ref={ref} style={{
           opacity: visible? "1": "0",
+          transform: visible? "translateX(0)" : "translateX(-50vw)"
         }}>
           <a target="_blank" href="http://anxietymanager.surge.sh"><div className="project-image" id="p4-image"></div></a>
           <div className="project-description" id="right-description">
@@ -64,6 +65,7 @@ const Projects = (props) => {
 
         <div className="project" id="project-right" ref={ref1} style={{
           opacity: visible1? "1": "0",
+          transform: visible1? "translateX(0)" : "translateX(50vw)"
         }}>
           <div className="project-description" id="left-description">
             <a className="right-a" target="_blank" href="http://sushizo-redesign.surge.sh">
@@ -86,6 +88,7 @@ const Projects = (props) => {
 
         <div className="project" id="project-left" ref={ref2} style={{
           opacity: visible2? "1": "0",
+          transform: visible2? "translateX(0)" : "translateX(-50vw)"
         }}>
           <a target="_blank" href="https://foregoing-celery.surge.sh/"><div className="project-image" id="p3-image"></div></a>
           <div className="project-description" id="right-description">
@@ -112,6 +115,7 @@ const Projects = (props) => {
 
         <div className="project" id="project-right" ref={ref3} style={{
           opacity: visible3? "1": "0",
+          transform: visible3? "translateX(0)" : "translateX(50vw)"
         }}>
           <div className="project-description" id="left-description">
             <a target="_blank" href="http://breweryfinder.surge.sh/">
@@ -137,6 +141,7 @@ const Projects = (props) => {
 
         <div className="project" id="project-left" ref={ref4} style={{
           opacity: visible4? "1": "0",
+          transform: visible4? "translateX(0)" : "translateX(-50vw)"
         }}>
           <a target="_blank" href="http://matchyshapes.surge.sh/"><div className="project-image" id="p1-image"></div></a>
           <div className="project-description" id="right-description">
