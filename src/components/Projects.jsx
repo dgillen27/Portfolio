@@ -3,7 +3,7 @@ import TrackVisibility from 'react-on-screen';
 import ProjectLeft from './ProjectLeft'
 
 function useOnScreen(options) {
-  const ref = React.useRef();
+  const [ref, setRef] = React.useState(null)
   const [visible, setVisible] = React.useState(false);
 
   React.useEffect(() => {
@@ -11,18 +11,18 @@ function useOnScreen(options) {
       setVisible(entry.isIntersecting)
     }, options)
 
-    if (ref.current) {
-      observer.observe(ref.current)
+    if (ref) {
+      observer.observe(ref)
     }
 
     return () => {
-      if (ref.current) {
-        observer.observe(ref.current)
+      if (ref) {
+        observer.observe(ref)
       }
     }
   }, [ref, options])
 
-  return [ref, visible]
+  return [setRef, visible]
 }
 
 
@@ -39,7 +39,7 @@ const Projects = (props) => {
 
         <div className="project" id="project-left" ref={ref} style={{
           opacity: visible? "1": "0",
-          transform: visible? "translateX(0)" : "translateX(-50vw)"
+          transform: visible? "translateX(0)" : "translateX(-30vw)"
         }}>
           <a target="_blank" href="http://anxietymanager.surge.sh"><div className="project-image" id="p4-image"></div></a>
           <div className="project-description" id="right-description">
@@ -65,7 +65,7 @@ const Projects = (props) => {
 
         <div className="project" id="project-right" ref={ref1} style={{
           opacity: visible1? "1": "0",
-          transform: visible1? "translateX(0)" : "translateX(50vw)"
+          transform: visible1? "translateX(0)" : "translateX(30vw)"
         }}>
           <div className="project-description" id="left-description">
             <a className="right-a" target="_blank" href="http://sushizo-redesign.surge.sh">
@@ -88,7 +88,7 @@ const Projects = (props) => {
 
         <div className="project" id="project-left" ref={ref2} style={{
           opacity: visible2? "1": "0",
-          transform: visible2? "translateX(0)" : "translateX(-50vw)"
+          transform: visible2? "translateX(0)" : "translateX(-30vw)"
         }}>
           <a target="_blank" href="https://foregoing-celery.surge.sh/"><div className="project-image" id="p3-image"></div></a>
           <div className="project-description" id="right-description">
@@ -115,7 +115,7 @@ const Projects = (props) => {
 
         <div className="project" id="project-right" ref={ref3} style={{
           opacity: visible3? "1": "0",
-          transform: visible3? "translateX(0)" : "translateX(50vw)"
+          transform: visible3? "translateX(0)" : "translateX(30vw)"
         }}>
           <div className="project-description" id="left-description">
             <a target="_blank" href="http://breweryfinder.surge.sh/">
@@ -141,7 +141,7 @@ const Projects = (props) => {
 
         <div className="project" id="project-left" ref={ref4} style={{
           opacity: visible4? "1": "0",
-          transform: visible4? "translateX(0)" : "translateX(-50vw)"
+          transform: visible4? "translateX(0)" : "translateX(-30vw)"
         }}>
           <a target="_blank" href="http://matchyshapes.surge.sh/"><div className="project-image" id="p1-image"></div></a>
           <div className="project-description" id="right-description">
