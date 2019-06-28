@@ -1,9 +1,9 @@
 import React from 'react';
 
 const OpenMenu = (props) => {
-  const { changeClass, goWelcome, goProjects, goAbout, goContact} = props
+  const { changeClass, goWelcome, goProjects, goAbout, goContact, showClass} = props
   return (
-    <div className="open-menu">
+    <div className="open-menu" id={ showClass? "open" : "closed"}>
       <h1 onClick={props.changeClass}>X</h1>
       <h2 onClick={() => changeClass() || goWelcome()}>HOME</h2>
       <h2 onClick={() => changeClass() || goProjects()}>PROJECTS</h2>

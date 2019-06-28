@@ -7,10 +7,10 @@ const Header = (props) => {
     <div className={props.isTop? "header": "topHeader"}>
 
       <div className="header-content">
-        <Link onClick={props.goWelcome} className="header-button">Home</Link>
-        <Link onClick={props.goProjects} className="header-button">Projects</Link>
-        <Link onClick={props.goAbout} className="header-button">About</Link>
-        <Link onClick={props.goContact} className="header-button">Contact</Link>
+        <Link to="/" onClick={props.goWelcome} className="header-button">Home</Link>
+        <Link to="/" onClick={props.goProjects} className="header-button">Projects</Link>
+        <Link to="/" onClick={props.goAbout} className="header-button">About</Link>
+        <Link to="/" onClick={props.goContact} className="header-button">Contact</Link>
       </div>
       <HamburgerMenu {...props}/>
     </div>

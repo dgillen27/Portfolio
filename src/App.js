@@ -100,13 +100,13 @@ class App extends Component {
         <Welcome
           welcome={this.welcome}
           goProjects={this.goProjects}/>
-        { showClass && <OpenMenu
+        <OpenMenu
           goProjects={this.goProjects}
           goAbout={this.goAbout}
           goContact={this.goContact}
           goWelcome={this.goWelcome}
           changeClass={this.changeClass}
-          showClass={showClass}/>}
+          showClass={showClass}/> 
         <Projects
           ref1={this.ref1}
           projects={this.projects}/>

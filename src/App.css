@@ -543,9 +543,19 @@ textarea:focus {
   top: 0;
   height: 100vh;
   width: 75vw;
-  animation: menu-opening ease-out 500ms;
+  /* animation: menu-opening ease-out 500ms; */
   background: rgba(34, 34, 34, 1);
   color: white;
+  transition: 301ms;
+}
+
+#open {
+  transform: translateX(0);
+}
+
+#closed {
+  transform: translateX(-75vw);
+  transition: 301ms;
 }
 
 .open-menu h1 {
@@ -578,6 +588,17 @@ textarea:focus {
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.5);
+  animation: opacity-change 300ms ease-out;
+}
+
+@keyframes opacity-change {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes menu-opening {
