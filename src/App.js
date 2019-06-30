@@ -106,7 +106,7 @@ class App extends Component {
           goContact={this.goContact}
           goWelcome={this.goWelcome}
           changeClass={this.changeClass}
-          showClass={showClass}/> 
+          showClass={showClass}/>
         <Projects
           ref1={this.ref1}
           projects={this.projects}/>
@@ -114,7 +114,7 @@ class App extends Component {
           about={this.about}/>
         <Contact
           contact={this.contact}/>
-        <Footer />
+        {/*<Footer />*/}
       </div>
     );
   }
