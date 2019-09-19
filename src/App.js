@@ -1,19 +1,17 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
-import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Projects from './components/Projects';
-import About from './components/About';
-import Contact from './components/Contact';
-import Welcome from './components/Welcome';
-import OpenMenu from './components/OpenMenu';
-import Cover from './components/Cover'
-
-
+import React, { Component, useState, useEffect } from "react";
+import { withRouter } from "react-router-dom";
+import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Projects from "./components/Projects";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Welcome from "./components/Welcome";
+import OpenMenu from "./components/OpenMenu";
+import Cover from "./components/Cover";
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
     this.projects = React.createRef();
     this.contact = React.createRef();
@@ -32,41 +30,48 @@ class App extends Component {
     this.state = {
       showClass: false,
       isTop: false,
-      show: false,
-    }
+      show: false
+    };
   }
 
   goProjects() {
-    this.projects.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this.projects.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
   }
 
   goContact() {
-    this.contact.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    this.contact.current.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   goAbout() {
-    this.about.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    this.about.current.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   goWelcome() {
-    this.welcome.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: "nearest" })
+    this.welcome.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
   }
 
   changeClass() {
     const { showClass } = this.state;
     this.setState({
-      showClass: showClass === true? false: true
-    })
+      showClass: showClass === true ? false : true
+    });
   }
 
   showItem() {
-    const project = document.querySelector(".project")
+    const project = document.querySelector(".project");
     const value = project.getBoundingClientRect();
     if (value.top > window.scrollY) {
       console.log(value.top);
       this.setState({
         show: true
-      })
+      });
     }
   }
 
@@ -75,18 +80,18 @@ class App extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener('scroll', () => {
+    document.addEventListener("scroll", () => {
       const isTop = window.scrollY;
       if (isTop !== 0) {
-          this.setState({ isTop: true })
-      } else if (isTop === 0){
-        this.setState({ isTop: false})
+        this.setState({ isTop: true });
+      } else if (isTop === 0) {
+        this.setState({ isTop: false });
       }
     });
   }
 
   render() {
-    const { showClass, isTop } = this.state
+    const { showClass, isTop } = this.state;
     return (
       <div className="App">
         <Header
@@ -95,25 +100,21 @@ class App extends Component {
           goAbout={this.goAbout}
           goContact={this.goContact}
           goWelcome={this.goWelcome}
-          changeClass={this.changeClass}/>
-        { showClass && <Cover />}
-        <Welcome
-          welcome={this.welcome}
-          goProjects={this.goProjects}/>
+          changeClass={this.changeClass}
+        />
+        {showClass && <Cover />}
+        <Welcome welcome={this.welcome} goProjects={this.goProjects} />
         <OpenMenu
           goProjects={this.goProjects}
           goAbout={this.goAbout}
           goContact={this.goContact}
           goWelcome={this.goWelcome}
           changeClass={this.changeClass}
-          showClass={showClass}/>
-        <Projects
-          ref1={this.ref1}
-          projects={this.projects}/>
-        <About
-          about={this.about}/>
-        <Contact
-          contact={this.contact}/>
+          showClass={showClass}
+        />
+        <Projects ref1={this.ref1} projects={this.projects} />
+        <About about={this.about} />
+        <Contact contact={this.contact} />
         {/*<Footer />*/}
       </div>
     );

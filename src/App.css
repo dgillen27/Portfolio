@@ -1,7 +1,7 @@
 :root {
-  --my-red: #DC153B;
-  --anx-blue: #2394F3;
-  --anx-orange: #F38322;
+  --my-red: #dc153b;
+  --anx-blue: #2394f3;
+  --anx-orange: #f38322;
 }
 
 .App {
@@ -122,13 +122,13 @@ a {
 
 .first {
   position: relative;
-  animation: slide-in-left 1000ms ease-out;
+  /* animation: slide-in-left 1000ms ease-out; */
 }
 
 .second {
-  visibility: hidden;
+  /* visibility: hidden;k */
   position: relative;
-  animation: slide-in-right 1000ms ease-out;
+  /* animation: slide-in-right 1000ms ease-out; */
   animation-delay: 800ms;
   animation-fill-mode: forwards;
 }
@@ -144,9 +144,9 @@ a {
   transition: 300ms;
   text-shadow: none;
   position: relative;
-  animation: slide-up 1000ms;
+  /* animation: slide-up 1000ms; */
   animation-delay: 1300ms;
-  visibility: hidden;
+  /* visibility: hidden;k */
   animation-fill-mode: forwards;
 }
 
@@ -171,7 +171,7 @@ a {
   30% {
     visibility: hidden;
   }
-  40%: {
+  40% {
     visibility: visible;
   }
 
@@ -193,7 +193,7 @@ a {
   transition: color 400ms;
   font-size: 20px;
   text-decoration: underline;
-  color: #057FD2;
+  color: #057fd2;
 }
 
 .small-link:hover {
@@ -202,7 +202,7 @@ a {
 }
 
 .project-name {
-  color: #057FD2;
+  color: #057fd2;
   text-decoration: none;
   font-size: 2em;
   transition: color 400ms;
@@ -258,13 +258,11 @@ a {
   width: 100%;
   justify-self: center;
   align-self: center;
-  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 #p4-image {
   background-image: url("https://i.imgur.com/cibV9JR.png");
-  /* background-image: url("https://s3.amazonaws.com/image-urls/images/anx_manager_screen.png"); */
-  /* background-position: left; */
 }
 
 #ux-image {
@@ -291,7 +289,7 @@ a {
   min-width: 300px;
   width: 95%;
   justify-self: center;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
 }
 
@@ -321,7 +319,6 @@ a {
 }
 
 .about-container h1 {
-
 }
 
 .about a {
@@ -358,7 +355,7 @@ a {
 
 .about p {
   margin-top: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .about-icon {
@@ -382,13 +379,13 @@ a {
 }
 
 p {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .profile-img {
   width: 300px;
   /* border-radius: 100%; */
-  box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.30);
+  box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.3);
   /* border: 1px solid white; */
   align-self: center;
   justify-self: center;
@@ -414,7 +411,7 @@ p {
   background-image: url("https://images.pexels.com/photos/33999/pexels-photo.jpg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-size: cover;
   background-position: left;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, .9);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
 }
 
 .contact-form {
@@ -431,8 +428,8 @@ input {
   border: none;
   margin: 5px;
   font-size: 16px;
-  font-family: 'Lato', sans-serif;
-  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  font-family: "Lato", sans-serif;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   padding-left: 10px;
   border-radius: 5px;
 }
@@ -449,8 +446,8 @@ textarea {
   border: none;
   margin: 5px;
   font-size: 16px;
-  font-family: 'Lato', sans-serif;
-  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  font-family: "Lato", sans-serif;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   padding: 10px 0 0 10px;
   border-radius: 5px;
 }
@@ -523,7 +520,7 @@ textarea:focus {
 
 .topHeader .burger {
   background: white;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .topHeader .burger-container:hover {
@@ -573,12 +570,12 @@ textarea:focus {
 
 .open-menu h1:hover {
   cursor: pointer;
-  color: #DC153B;
+  color: #dc153b;
 }
 
 .open-menu h2:hover {
   cursor: pointer;
-  color: #DC153B;
+  color: #dc153b;
 }
 
 .open-cover {
@@ -737,13 +734,12 @@ textarea:focus {
     justify-self: left;
   }
 
+  #right-description {
+    justify-self: start;
+  }
 
-    #right-description {
-      justify-self: start;
-    }
-
-    #left-description {
-      grid-row-start: 2;
-      justify-self: start;
-    }
+  #left-description {
+    grid-row-start: 2;
+    justify-self: start;
+  }
 }
