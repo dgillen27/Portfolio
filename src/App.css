@@ -1,13 +1,24 @@
 :root {
-  --my-red: #DC153B;
-  --anx-blue: #2394F3;
-  --anx-orange: #F38322;
+  --my-red: #dc153b;
+  --anx-blue: #2394f3;
+  --anx-orange: #f38322;
+}
+
+@font-face {
+  font-family: circularStd;
+  src: url("./fonts/CircularStd-Book.ttf");
+}
+
+@font-face {
+  font-family: circularStdItalic;
+  src: url("./fonts/CircularStd-BlackItalic.ttf");
 }
 
 .App {
   text-align: center;
   color: #222;
-  font-family: "Ubuntu", sans-serif;
+  /* font-family: "Ubuntu", sans-serif; */
+  font-family: circularStd;
   background: #fefefe;
   overflow: hidden;
 }
@@ -25,9 +36,7 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* border-bottom: 3px solid var(--anx-blue); */
   z-index: 2;
-  /* color: black; */
   transition: background-color 500ms;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
@@ -41,14 +50,13 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* border-bottom: 3px solid var(--anx-blue); */
   z-index: 2;
-  /* color: black; */
 }
 
 .my-name {
   position: absolute;
-  left: 20px;
+  left: 40px;
+  margin: 0 auto;
 }
 
 .header-content {
@@ -59,25 +67,29 @@ a {
   align-items: center;
 }
 
-.header a {
+.header-button {
   font-size: 20px;
   transition: background-color, padding, font-size, 400ms;
   color: #222;
 }
 
-.header a:hover {
-  color: var(--my-red);
+.header h3 {
 }
 
-.topHeader a {
+.header-button:hover {
+  color: var(--my-red);
+  cursor: pointer;
+}
+
+.topHeader .header-button {
   font-size: 20px;
   transition: background-color, padding, font-size, 400ms;
   color: white;
   text-shadow: 1px 1px 1px black;
 }
 
-.topHeader a:hover {
-  /* color: var(--anx-blue); */
+.topHeader .header-button:hover {
+  cursor: pointer;
   color: var(--my-red);
 }
 
@@ -87,13 +99,7 @@ a {
 
 .welcome-container {
   height: 100vh;
-  /* background-image: url("https://images.pexels.com/photos/34153/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
-  /* background-image: url("https://images.pexels.com/photos/220357/pexels-photo-220357.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
-  /* background-image: url("https://images.pexels.com/photos/633409/pexels-photo-633409.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
-  /* background-image: url("https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
-  /* background-image: url("https://images.pexels.com/photos/1239162/pexels-photo-1239162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
   background-image: url("https://images.pexels.com/photos/1449082/pexels-photo-1449082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  /* background-image: url("https://images.pexels.com/photos/459654/pexels-photo-459654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
   background-size: cover;
   background-position: right;
 }
@@ -111,7 +117,6 @@ a {
 #welcome-content {
   background-size: cover;
   color: #ddd;
-  /* color: var(--anx-blue); */
   text-shadow: black 1px 1px 1px;
   display: flex;
   flex-direction: column;
@@ -121,21 +126,19 @@ a {
 }
 
 .first {
-  position: relative;
-  animation: slide-in-left 1000ms ease-out;
+  /* position: relative; */
 }
 
 .second {
-  visibility: hidden;
-  position: relative;
-  animation: slide-in-right 1000ms ease-out;
+  /* position: relative; */
   animation-delay: 800ms;
   animation-fill-mode: forwards;
+  font-size: 45px;
 }
 
 .welcome-button {
   font-size: 21px;
-  color: black;
+  color: rgba(0, 0, 0, 0.8);
   border: 3px solid #ddd;
   background: #ddd;
   width: 200px;
@@ -144,22 +147,14 @@ a {
   transition: 300ms;
   text-shadow: none;
   position: relative;
-  animation: slide-up 1000ms;
   animation-delay: 1300ms;
-  visibility: hidden;
   animation-fill-mode: forwards;
 }
 
 .welcome-button:hover {
   cursor: pointer;
-  /* background: #0EF79B; */
-  /* border-color: #0EF79B; */
-  /* color: #242834; */
-  /* background: var(--anx-blue);
-  border-color: var(--anx-blue); */
   background: var(--my-red);
   border-color: var(--my-red);
-  color: black;
   color: white;
 }
 
@@ -171,7 +166,7 @@ a {
   30% {
     visibility: hidden;
   }
-  40%: {
+  40% {
     visibility: visible;
   }
 
@@ -193,7 +188,7 @@ a {
   transition: color 400ms;
   font-size: 20px;
   text-decoration: underline;
-  color: #057FD2;
+  color: #057fd2;
 }
 
 .small-link:hover {
@@ -202,11 +197,12 @@ a {
 }
 
 .project-name {
-  color: #057FD2;
+  color: #057fd2;
   text-decoration: none;
   font-size: 2em;
   transition: color 400ms;
-  font-family: "Ubuntu", sans-serif;
+  /* font-family: "Ubuntu", sans-serif; */
+  font-family: circularStd;
   font-weight: bold;
 }
 
@@ -258,13 +254,11 @@ a {
   width: 100%;
   justify-self: center;
   align-self: center;
-  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 #p4-image {
   background-image: url("https://i.imgur.com/cibV9JR.png");
-  /* background-image: url("https://s3.amazonaws.com/image-urls/images/anx_manager_screen.png"); */
-  /* background-position: left; */
 }
 
 #ux-image {
@@ -291,12 +285,14 @@ a {
   min-width: 300px;
   width: 95%;
   justify-self: center;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
+  /* font-family: circularStd; */
   font-weight: 400;
 }
 
 .project-description h3 {
   font-weight: 400;
+  font-style: italic;
 }
 
 #left-description {
@@ -321,7 +317,6 @@ a {
 }
 
 .about-container h1 {
-
 }
 
 .about a {
@@ -358,7 +353,7 @@ a {
 
 .about p {
   margin-top: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .about-icon {
@@ -382,13 +377,13 @@ a {
 }
 
 p {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .profile-img {
   width: 300px;
   /* border-radius: 100%; */
-  box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.30);
+  box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.3);
   /* border: 1px solid white; */
   align-self: center;
   justify-self: center;
@@ -414,7 +409,7 @@ p {
   background-image: url("https://images.pexels.com/photos/33999/pexels-photo.jpg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-size: cover;
   background-position: left;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, .9);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
 }
 
 .contact-form {
@@ -431,8 +426,8 @@ input {
   border: none;
   margin: 5px;
   font-size: 16px;
-  font-family: 'Lato', sans-serif;
-  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  font-family: "Lato", sans-serif;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   padding-left: 10px;
   border-radius: 5px;
 }
@@ -449,8 +444,8 @@ textarea {
   border: none;
   margin: 5px;
   font-size: 16px;
-  font-family: 'Lato', sans-serif;
-  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  font-family: "Lato", sans-serif;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   padding: 10px 0 0 10px;
   border-radius: 5px;
 }
@@ -501,18 +496,9 @@ textarea:focus {
   justify-content: space-between;
 }
 
-.burger {
-  display: block;
-  height: 2px;
-  background: #222;
-  width: 40px;
-  margin: 3px;
-  /* border-radius: 2px; */
-}
-
 .burger-container {
   display: none;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   flex-direction: column;
   transition: background-color 500ms, height 500ms, width 500ms;
@@ -521,9 +507,22 @@ textarea:focus {
   margin-right: 10vw;
 }
 
+.burger {
+  display: block;
+  height: 2px;
+  background: #222;
+  width: 30px;
+  margin: 3px;
+  /* border-radius: 2px; */
+}
+
+.burger-long {
+  width: 40px;
+}
+
 .topHeader .burger {
   background: white;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .topHeader .burger-container:hover {
@@ -532,7 +531,6 @@ textarea:focus {
 
 .burger-container:hover {
   cursor: pointer;
-  background: #ccc;
 }
 
 .open-menu {
@@ -555,7 +553,7 @@ textarea:focus {
 }
 
 #closed {
-  transform: translateX(-75vw);
+  transform: translateX(-80vw);
   transition: 301ms;
 }
 
@@ -573,12 +571,12 @@ textarea:focus {
 
 .open-menu h1:hover {
   cursor: pointer;
-  color: #DC153B;
+  color: #dc153b;
 }
 
 .open-menu h2:hover {
   cursor: pointer;
-  color: #DC153B;
+  color: #dc153b;
 }
 
 .open-cover {
@@ -662,8 +660,8 @@ textarea:focus {
     display: none;
     width: 75%;
     font-size: 12px;
-    position: absolute;
-    right: 0;
+    /* position: absolute; */
+    /* right: 0; */
   }
 
   #about-content {
@@ -679,10 +677,6 @@ textarea:focus {
     margin-top: 15px;
     width: 90%;
     /* text-align: center; */
-  }
-
-  .my-name {
-    display: none;
   }
 
   .open-menu {
@@ -737,13 +731,12 @@ textarea:focus {
     justify-self: left;
   }
 
+  #right-description {
+    justify-self: start;
+  }
 
-    #right-description {
-      justify-self: start;
-    }
-
-    #left-description {
-      grid-row-start: 2;
-      justify-self: start;
-    }
+  #left-description {
+    grid-row-start: 2;
+    justify-self: start;
+  }
 }

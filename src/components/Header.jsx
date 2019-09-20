@@ -1,20 +1,29 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import HamburgerMenu from './HamburgerMenu'
+import React from "react";
+import { Link } from "react-router-dom";
+import HamburgerMenu from "./HamburgerMenu";
 
-const Header = (props) => {
+const Header = props => {
+  const { goWelcome, goProjects, goAbout, goContact, isTop } = props;
   return (
-    <div className={props.isTop? "header": "topHeader"}>
-
+    <div className={isTop ? "header" : "topHeader"}>
+      <h3 className="header-button my-name">Daniel Gillen</h3>
       <div className="header-content">
-        <Link to="/" onClick={props.goWelcome} className="header-button">Home</Link>
-        <Link to="/" onClick={props.goProjects} className="header-button">Projects</Link>
-        <Link to="/" onClick={props.goAbout} className="header-button">About</Link>
-        <Link to="/" onClick={props.goContact} className="header-button">Contact</Link>
+        <h3 to="/" onClick={goWelcome} className="header-button">
+          Home
+        </h3>
+        <h3 to="/" onClick={goProjects} className="header-button">
+          Projects
+        </h3>
+        <h3 to="/" onClick={goAbout} className="header-button">
+          About
+        </h3>
+        <h3 to="/" onClick={goContact} className="header-button">
+          Contact
+        </h3>
       </div>
-      <HamburgerMenu {...props}/>
+      <HamburgerMenu {...props} />
     </div>
-  )
-}
+  );
+};
 
 export default Header;
