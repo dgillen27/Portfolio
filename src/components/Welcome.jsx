@@ -34,7 +34,7 @@ const Welcome = props => {
         <div className="content" id="welcome-content">
           {trail.map(({ x, height, ...rest }, index) => (
             <animated.div
-              key={list[index]}
+              key={index}
               style={{
                 ...rest,
                 transform: x.interpolate(x => `translate3d(0,${x}px,0)`)
