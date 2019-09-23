@@ -376,6 +376,15 @@ a {
   transform: translateY(-4px);
 }
 
+#resume-icon {
+  transition: transform 200ms linear;
+}
+
+#resume-icon:hover {
+  transform: translateY(-4px);
+  cursor: pointer;
+}
+
 p {
   font-family: "Lato", sans-serif;
 }

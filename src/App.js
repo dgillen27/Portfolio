@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import Welcome from "./components/Welcome";
 import OpenMenu from "./components/OpenMenu";
 import Cover from "./components/Cover";
+import FsLightbox from "fslightbox-react";
 
 function App() {
   const projects = React.createRef();
@@ -20,6 +21,7 @@ function App() {
   const [showClass, setShowClass] = useState(false);
   const [isTop, setIsTop] = useState(false);
   const [show, setShow] = useState(false);
+  const [toggler, setToggler] = useState(false);
 
   const goProjects = () => {
     projects.current.scrollIntoView({
@@ -79,8 +81,12 @@ function App() {
         showClass={showClass}
       />
       <Projects ref1={ref1} projects={projects} />
-      <About about={about} />
+      <About about={about} setToggler={setToggler} toggler={toggler} />
       <Contact contact={contact} />
+      <FsLightbox
+        toggler={toggler}
+        sources={["https://i.imgur.com/Sgp7OB1.jpg"]}
+      />
     </div>
   );
 }
