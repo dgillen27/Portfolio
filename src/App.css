@@ -562,7 +562,7 @@ textarea:focus {
 }
 
 #closed {
-  transform: translateX(-80vw);
+  transform: translateX(-100vw);
   transition: 301ms;
 }
 
