@@ -1,40 +1,40 @@
 import React, { useEffect, useState } from "react";
 import Project from "./Project";
 
-function useOnScreen(options) {
-  const [ref, setRef] = useState(null);
-  const [visible, setVisible] = useState(false);
+export default function ProjectsList(props) {
+  function useOnScreen(options) {
+    const [ref, setRef] = useState(null);
+    const [visible, setVisible] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      setVisible(entry.isIntersecting);
-    }, options);
+    useEffect(() => {
+      const observer = new IntersectionObserver(([entry]) => {
+        setVisible(entry.isIntersecting);
+      }, options);
 
-    if (ref) {
-      observer.observe(ref);
-    }
-
-    return () => {
       if (ref) {
         observer.observe(ref);
       }
-    };
-  }, [ref, options]);
 
-  return [setRef, visible];
-}
+      return () => {
+        if (ref) {
+          observer.observe(ref);
+        }
+      };
+    }, [ref, options]);
 
-const ProjectsList = props => {
+    return [setRef, visible];
+  }
+
   const [ref, visible] = useOnScreen({ rootMargin: "-50px" });
   const [ref1, visible1] = useOnScreen({ rootMargin: "-50px" });
   const [ref2, visible2] = useOnScreen({ rootMargin: "-50px" });
   const [ref3, visible3] = useOnScreen({ rootMargin: "-50px" });
   const [ref4, visible4] = useOnScreen({ rootMargin: "-5px" });
+
   return (
     <div className="projects-container" ref={props.projects}>
       <h1 id="project-label">Projects</h1>
       <div className="content" id="project-content">
-        {/* Anxiety Manager */}
         <Project
           projectRef={ref}
           visible={visible}
@@ -56,7 +56,6 @@ const ProjectsList = props => {
           ]}
         />
 
-        {/* Sushi Zo */}
         <Project
           rightOrientation={true}
           imagePositionLeft={true}
@@ -77,7 +76,6 @@ const ProjectsList = props => {
           ]}
         />
 
-        {/* Beat HostR */}
         <Project
           projectRef={ref2}
           visible={visible2}
@@ -101,7 +99,6 @@ const ProjectsList = props => {
           ]}
         />
 
-        {/* Brewery Finder */}
         <Project
           rightOrientation={true}
           imagePositionLeft={true}
@@ -124,7 +121,6 @@ const ProjectsList = props => {
           ]}
         />
 
-        {/* Matchy Shapes */}
         <Project
           projectRef={ref4}
           visible={visible4}
@@ -146,6 +142,4 @@ const ProjectsList = props => {
       </div>
     </div>
   );
-};
-
-export default ProjectsList;
+}
