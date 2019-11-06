@@ -31,7 +31,7 @@ const About = ({ about, setToggler, toggler }) => {
       <div>
         <h1>About me</h1>
         <div className="content" id="about-content">
-          {/*<div><img className="profile-img" src="https://s3.amazonaws.com/image-urls/images/LinkedIn.jpg" alt="" /></div>*/}
+          {/* <div><img className="profile-img" src="https://s3.amazonaws.com/image-urls/images/LinkedIn.jpg" alt="" /></div> */}
           <div className="about">
             <p>
               I am a full-stack developer based in New York City with a
