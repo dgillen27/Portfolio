@@ -2,7 +2,7 @@ import React, { Component, useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-import Projects from "./components/Projects";
+import ProjectsList from "./components/ProjectsList";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Welcome from "./components/Welcome";
@@ -79,7 +79,7 @@ function App() {
         changeClass={changeClass}
         showClass={showClass}
       />
-      <Projects ref1={ref1} projects={projects} />
+      <ProjectsList ref1={ref1} projects={projects} />
       <About about={about} setToggler={setToggler} toggler={toggler} />
       <Contact contact={contact} />
       <FsLightbox
