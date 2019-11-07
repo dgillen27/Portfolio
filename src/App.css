@@ -73,9 +73,6 @@ a {
   color: #222;
 }
 
-.header h3 {
-}
-
 .header-button:hover {
   color: var(--my-red);
   cursor: pointer;
@@ -124,10 +121,6 @@ a {
   justify-content: center;
   align-items: center;
   font-size: 55px;
-}
-
-.first {
-  /* position: relative; */
 }
 
 .second {
@@ -313,9 +306,6 @@ a {
   /* background: #121212; */
   /* background: #A1A1A1; */
   padding: 100px 0;
-}
-
-.about-container h1 {
 }
 
 .about a {
@@ -658,10 +648,6 @@ textarea:focus {
     display: block;
   }
 
-  .header {
-    /* justify-content: flex-start; */
-  }
-
   .header-content {
     display: none;
     width: 75%;
@@ -712,10 +698,6 @@ textarea:focus {
 @media only screen and (max-width: 414px) {
   .project a {
     max-width: 300px;
-  }
-
-  .project {
-    /* max-width: 300px; */
   }
 
   .project {
