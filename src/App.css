@@ -198,7 +198,6 @@ a {
 .project-name:hover {
   color: var(--my-red);
   letter-spacing: 2px;
-  border-bottom: 1px solid var(--my-red);
 }
 
 #project-content {
