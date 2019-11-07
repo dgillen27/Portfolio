@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
@@ -19,7 +19,6 @@ function App() {
 
   const [showClass, setShowClass] = useState(false);
   const [isTop, setIsTop] = useState(false);
-  const [show, setShow] = useState(false);
   const [toggler, setToggler] = useState(false);
 
   const goProjects = () => {

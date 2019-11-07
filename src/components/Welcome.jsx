@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useTrail, animated, config } from "react-spring";
+import { useTrail, animated } from "react-spring";
 
 const Welcome = props => {
   const list = [
