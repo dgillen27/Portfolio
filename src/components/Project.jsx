@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function Project({
   rightOrientation,
@@ -25,16 +26,31 @@ export default function Project({
         }}
       >
         <div className="project-description" id="left-description">
-          <a className="right-a" target="_blank" href={projectLink}>
+          <a
+            className="right-a"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={projectLink}
+          >
             <div className="project-name">{projectName}</div>
           </a>
           <h2>{projectType}</h2>
           <h3>{projectDescription}</h3>
-          <a className="small-link" target="_blank" href={projectLink}>
+          <a
+            className="small-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={projectLink}
+          >
             Website
           </a>
           <br />
-          <a className="small-link" target="_blank" href={githubLink}>
+          <a
+            className="small-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={githubLink}
+          >
             Github
           </a>
           <br />
@@ -44,7 +60,7 @@ export default function Project({
             <img key={i} className="icon" src={icon} alt="" />
           ))}
         </div>
-        <a target="_blank" href={projectLink}>
+        <a target="_blank" rel="noopener noreferrer" href={projectLink}>
           <div
             className={
               imagePositionLeft
@@ -67,7 +83,7 @@ export default function Project({
           transform: visible ? "translateY(0)" : "translateY(30px)"
         }}
       >
-        <a target="_blank" href={projectLink}>
+        <a target="_blank" rel="noopener noreferrer" href={projectLink}>
           <div
             className={
               imagePositionLeft
@@ -78,16 +94,26 @@ export default function Project({
           ></div>
         </a>
         <div className="project-description" id="right-description">
-          <a target="_blank" href={projectLink}>
+          <a target="_blank" rel="noopener noreferrer" href={projectLink}>
             <div className="project-name">{projectName}</div>
           </a>
           <h2>{projectType}</h2>
           <h3>{projectDescription}</h3>
-          <a className="small-link" target="_blank" href={projectLink}>
+          <a
+            className="small-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={projectLink}
+          >
             Website
           </a>
           <br />
-          <a className="small-link" target="_blank" href={githubLink}>
+          <a
+            className="small-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={githubLink}
+          >
             Github
           </a>
           <br />
@@ -100,3 +126,16 @@ export default function Project({
       </div>
     );
 }
+
+Project.propTypes = {
+  rightOrientation: PropTypes.bool,
+  visible: PropTypes.bool,
+  projectImage: PropTypes.string,
+  imagePositionLeft: PropTypes.bool,
+  projectLink: PropTypes.string,
+  projectName: PropTypes.string,
+  projectType: PropTypes.string,
+  projectDescription: PropTypes.string,
+  githubLink: PropTypes.string,
+  icons: PropTypes.array
+};

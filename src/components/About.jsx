@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import FsLightbox from "fslightbox-react";
+import React, { useState, useEffect, useRef } from "react";
 
 function useOnScreen(options) {
-  const ref = React.useRef();
-  const [visible, setVisible] = React.useState(false);
+  const ref = useRef();
+  const [visible, setVisible] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       setVisible(entry.isIntersecting);
     }, options);
@@ -62,6 +61,7 @@ const About = ({ about, setToggler, toggler }) => {
               />
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/danielgillen/"
               >
                 <img
@@ -70,7 +70,11 @@ const About = ({ about, setToggler, toggler }) => {
                   alt=""
                 />
               </a>
-              <a target="_blank" href="https://github.com/dgillen27">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/dgillen27"
+              >
                 <img
                   className="about-icon"
                   src="https://s3.amazonaws.com/image-urls/images/githubicon.png"
