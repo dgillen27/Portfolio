@@ -51,7 +51,7 @@ function App() {
   useEffect(() => {
     document.addEventListener("scroll", () => {
       const isTop = window.scrollY;
-      if (isTop !== 0) {
+      if (isTop > 0) {
         setIsTop(true);
       } else if (isTop === 0) {
         setIsTop(false);
