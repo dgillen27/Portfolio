@@ -17,7 +17,6 @@
 .App {
   text-align: center;
   color: #222;
-  /* font-family: "Ubuntu", sans-serif; */
   font-family: circularStd;
   background: #f6f6f6;
   overflow: hidden;
@@ -96,7 +95,6 @@ a {
 
 .welcome-container {
   height: 100vh;
-  /* background-image: url("https://images.pexels.com/photos/1449082/pexels-photo-1449082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
   background-image: url(./images/portfolioHeroImage.jpeg);
   background-size: cover;
   background-position: right;
@@ -124,7 +122,6 @@ a {
 }
 
 .second {
-  /* position: relative; */
   animation-delay: 800ms;
   animation-fill-mode: forwards;
   font-size: 45px;
@@ -175,7 +172,6 @@ a {
   height: auto;
   padding-top: 80px;
   width: 100vw;
-  /* background: white; */
 }
 
 .small-link {
@@ -190,17 +186,19 @@ a {
 }
 
 .project-name {
+  display: inline;
   color: #057fd2;
   text-decoration: none;
   font-size: 2em;
-  transition: color 400ms;
+  transition: color 400ms, letter-spacing 400ms;
   font-family: circularStd;
   font-weight: bold;
 }
 
 .project-name:hover {
-  /* color: var(--anx-orange); */
   color: var(--my-red);
+  letter-spacing: 2px;
+  border-bottom: 1px solid var(--my-red);
 }
 
 #project-content {
@@ -213,15 +211,12 @@ a {
 }
 
 .project {
-  /* height: 25%; */
   min-width: 300px;
   width: 80%;
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   margin: 70px 0;
   grid-column-gap: 3rem;
-  /* box-shadow: 0px 3px 15px rgba(0,0,0,0.2); */
   position: relative;
   transition: 500ms;
 }
@@ -249,36 +244,12 @@ a {
   background-position: left;
 }
 
-#p4-image {
-  background-image: url("https://i.imgur.com/cibV9JR.png");
-}
-
-#ux-image {
-  background-image: url("https://i.imgur.com/JFXP2QN.png");
-  background-position: left;
-}
-
-#p3-image {
-  background-image: url("https://i.imgur.com/TEDCNZw.png");
-  background-position: left;
-}
-
-#p2-image {
-  background-image: url("https://i.imgur.com/GxJ5KBw.png");
-  background-position: left;
-}
-
-#p1-image {
-  background-image: url("https://i.imgur.com/6IcnWlD.png");
-}
-
 .project-description {
   text-align: left;
   min-width: 300px;
   width: 95%;
   justify-self: center;
   font-family: "Lato", sans-serif;
-  /* font-family: circularStd; */
   font-weight: 400;
 }
 
@@ -303,8 +274,6 @@ a {
   height: auto;
   min-height: 45vh;
   width: 100vw;
-  /* background: #121212; */
-  /* background: #A1A1A1; */
   padding: 100px 0;
 }
 
@@ -314,7 +283,6 @@ a {
 }
 
 .about a:hover {
-  /* color: var(--anx-orange); */
   color: var(--my-red);
 }
 
@@ -380,9 +348,7 @@ p {
 
 .profile-img {
   width: 300px;
-  /* border-radius: 100%; */
   box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.3);
-  /* border: 1px solid white; */
   align-self: center;
   justify-self: center;
 }
@@ -399,7 +365,6 @@ p {
 
 .contact-container {
   height: calc(100vh - 106px);
-  /* height: auto; */
   max-height: 2000px;
   width: 100vw;
   padding-top: 106px;
@@ -464,7 +429,6 @@ textarea:focus {
 
 .submit-button:hover {
   cursor: pointer;
-  /* background: var(--anx-orange); */
   background: var(--my-red);
 }
 
@@ -482,7 +446,6 @@ textarea:focus {
 }
 
 .footer-content a:hover {
-  /* color:#057FD2; */
   color: var(--my-red);
 }
 
@@ -532,13 +495,11 @@ textarea:focus {
 .open-menu {
   display: none;
   flex-direction: column;
-  /* justify-content: flex-start; */
   text-align: left;
   position: fixed;
   top: 0;
   height: 100vh;
   width: 75vw;
-  /* animation: menu-opening ease-out 500ms; */
   background: rgba(34, 34, 34, 1);
   color: white;
   transition: 301ms;
@@ -610,7 +571,6 @@ textarea:focus {
   0% {
     left: -60vw;
     visibility: visible;
-    /* opacity: 0 */
   }
 
   100% {
@@ -635,7 +595,6 @@ textarea:focus {
 #project-label {
   grid-column-start: 1;
   grid-column-end: 3;
-  /* text-decoration: underline; */
   font-size: 38px;
 }
 
@@ -652,8 +611,6 @@ textarea:focus {
     display: none;
     width: 75%;
     font-size: 12px;
-    /* position: absolute; */
-    /* right: 0; */
   }
 
   #about-content {
@@ -662,13 +619,11 @@ textarea:focus {
 
   .about {
     justify-self: center;
-    /* font-size: 15px; */
     position: relative;
     bottom: 10px;
     z-index: 1;
     margin-top: 15px;
     width: 90%;
-    /* text-align: center; */
   }
 
   .open-menu {
@@ -706,16 +661,13 @@ textarea:focus {
   }
 
   .project-description {
-    /* max-width: 300px; */
     width: 99vw;
-    /* justify-self: start; */
     margin-left: 1vw;
   }
 
   .project-image {
     height: 300px;
     width: 100vw;
-    /* margin-left: 5%; */
     justify-self: left;
   }
 
