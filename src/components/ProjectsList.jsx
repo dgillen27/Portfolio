@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Project from "./Project";
 import npmPackage from "../images/npmPackage.png";
+import chatMessages from "../images/chatMessages.png";
+import socket from "../images/socket.png";
 
 export default function ProjectsList(props) {
   function useOnScreen(options) {
@@ -26,6 +28,7 @@ export default function ProjectsList(props) {
     return [setRef, visible];
   }
 
+  const [chat, visibleChat] = useOnScreen({ rootMargin: "-50px" });
   const [nav, visibleNav] = useOnScreen({ rootMargin: "-50px" });
   const [ref, visible] = useOnScreen({ rootMargin: "-50px" });
   const [ref1, visible1] = useOnScreen({ rootMargin: "-50px" });
@@ -38,7 +41,29 @@ export default function ProjectsList(props) {
       <h1 id="project-label">Projects</h1>
       <div className="content" id="project-content">
         <Project
+          rightOrientation={false}
+          projectRef={chat}
+          visible={visibleChat}
+          projectName="Group Chat"
+          projectType="Full-Stack App"
+          projectLink="http://groupchat.surge.sh"
+          githubLink="https://github.com/dgillen27/chatAppWebSockets"
+          projectImage={chatMessages}
+          imagePositionLeft={true}
+          projectDescription="Group Chat is a simple chat app, created for the purpose of learning how to implement 
+          and deploy an app with WebSockets using SocketIO."
+          icons={[
+            "https://s3.amazonaws.com/image-urls/images/react_icon.png",
+            "https://s3.amazonaws.com/image-urls/images/nodejs.png",
+            "https://s3.amazonaws.com/image-urls/images/htmlicon.png",
+            "https://s3.amazonaws.com/image-urls/images/css.png",
+            "https://s3.amazonaws.com/image-urls/images/npmicon.svg",
+            socket
+          ]}
+        />
+        <Project
           projectRef={nav}
+          rightOrientation={true}
           visible={visibleNav}
           projectName="Top-Detecting-NavBar"
           projectType="NPM Package/Open Source"
@@ -57,7 +82,7 @@ export default function ProjectsList(props) {
           ]}
         />
         <Project
-          rightOrientation={true}
+          rightOrientation={false}
           projectRef={ref}
           visible={visible}
           projectName="Anxiety Manager"
@@ -79,7 +104,7 @@ export default function ProjectsList(props) {
         />
 
         <Project
-          rightOrientation={false}
+          rightOrientation={true}
           imagePositionLeft={true}
           projectRef={ref1}
           visible={visible1}
@@ -100,7 +125,7 @@ export default function ProjectsList(props) {
 
         <Project
           projectRef={ref2}
-          rightOrientation={true}
+          rightOrientation={false}
           visible={visible2}
           projectName="Beat HostR"
           projectType="Full Stack App"
@@ -123,7 +148,7 @@ export default function ProjectsList(props) {
         />
 
         <Project
-          rightOrientation={false}
+          rightOrientation={true}
           imagePositionLeft={true}
           projectRef={ref3}
           visible={visible3}
@@ -145,7 +170,7 @@ export default function ProjectsList(props) {
         />
 
         <Project
-          rightOrientation={true}
+          rightOrientation={false}
           projectRef={ref4}
           visible={visible4}
           projectName="Matchy Shapes"
