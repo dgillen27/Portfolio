@@ -51,7 +51,8 @@ export default function ProjectsList(props) {
           projectImage={chatMessages}
           imagePositionLeft={true}
           projectDescription="Group Chat is a simple chat app, created for the purpose of learning how to implement 
-          and deploy an app with WebSockets using SocketIO."
+          and deploy an app with WebSockets using SocketIO. If you want to test out the responsiveness of the 
+          WebSockets, try opening this app in another browser or an incognito window and chat with yourself!"
           icons={[
             "https://s3.amazonaws.com/image-urls/images/react_icon.png",
             "https://s3.amazonaws.com/image-urls/images/nodejs.png",
