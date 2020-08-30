@@ -31,13 +31,15 @@ a {
   position: fixed;
   height: 68px;
   width: 100vw;
-  background: #fefefe;
+  background: rgba(254, 254, 254, 0.7);
   display: flex;
   justify-content: flex-end;
   align-items: center;
   z-index: 2;
-  transition: background-color 500ms;
+  transition: background-color 500ms, box-shadow 500ms,
+    backdrop-filter 50ms linear 200ms;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(30px) saturate(200%);
 }
 
 .topHeader {
